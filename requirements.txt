@@ -1,0 +1,14 @@
+# Pinned versions from the verified runs (2026-11-07)
+# Verified live: Qiskit 2.6.2, Bilby 2.8.2 in new-theory-tests/venv_qiskit.
+# Install: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+bilby==2.8.2
+lalsuite
+numpy
+scipy
+sympy
+qiskit==2.6.2
+qiskit-aer
+# ACT DR6 component only (heavy; install separately, see act-dr6/README.md):
+# cobaya==3.6.2, camb==2.0.5, sacc, act_dr6_mflike==1.1.0 (via cobaya-install)
+# Drive-code component only (heavy, exploratory, not run locally):
+# torch, pennylane, faiss-cpu, pyvista, transformers, loguru

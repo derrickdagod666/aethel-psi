@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+venv_*/
+*.log
+*.pickle
+.DS_Store
+
+# Data — public, downloaded by the run scripts, never committed
+*.hdf5
+*.npz
+*.fits
+*.sacc
+data/
+gwosc/
+act_dr6_data/
+dr6_data*.fits
+*_result.json
+gate3_*/
+*_outdir/
+
+# Dynesty / Bilby run outputs (large, regenerable)
+**/gate3_uaf/
+**/gate3_gr/
+**/GW231123_*/
+**/*.h5
+
+# Secrets — NEVER commit
+.env
+*.env
+*.pem
+*.key
+id_rsa*
+credentials*.json
+*_key.txt
+Aethelred_Key*
+agent_data/
+memory.db
+*.db
+
+# Node (aethelred-agent, when sanitized)
+node_modules/
+dist/
