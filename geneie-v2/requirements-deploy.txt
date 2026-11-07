@@ -1,0 +1,24 @@
+# GENEIE v2 — deploy files
+# Copy these files INTO ~/workspace/user/files/geneie/geneie-v2/
+# (they only ADD files; nothing in the app folder is overwritten).
+# Then deploy from that folder, or point your host at it as Root Directory.
+#
+# requirements-deploy.txt = the app's tested pinned requirements.txt
+# PLUS gunicorn (the production WSGI server). gunicorn is a deploy-only
+# addition; the app's own requirements.txt is untouched.
+# Pinned versions verified against venv_geneie pip freeze, 2026-11-07:
+#   pennylane 0.41.0, autoray 0.7.1, dash 3.0.4, plotly 6.1.0,
+#   scikit-learn 1.7.0, biopython 1.85, pandas 2.3.1, numpy 2.3.1,
+#   scipy 1.16.0. Python 3.12 (venv python is 3.12).
+# gunicorn 26.2.0 verified on PyPI 2026-11-07 (current release that day,
+# requires Python >= 3.10, supports 3.12).
+pennylane==0.41.0
+autoray==0.7.1
+dash==3.0.4
+plotly==6.1.0
+scikit-learn==1.7.0
+biopython==1.85
+pandas==2.3.1
+numpy==2.3.1
+scipy==1.16.0
+gunicorn==26.2.0

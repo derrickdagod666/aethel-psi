@@ -1,0 +1,18 @@
+# GENEIE v2 — Render Blueprint (native Python, no Docker build needed)
+# Use EITHER this file (Render dashboard -> New -> Blueprint, or place it
+# at the repo root as render.yaml) OR the Dashboard manual steps in
+# DEPLOY.md. If the repo holds both apps, set each service's Root
+# Directory to its app folder.
+# plan: free = $0. 750 free instance-hours/month per workspace covers
+# ONE service running 24/7 (~730 h/month) — see DEPLOY.md, it does NOT
+# cover two free services at once.
+services:
+  - type: web
+    name: geneie-v2
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: gunicorn app:server --bind 0.0.0.0:$PORT --worker-class gthread --workers 1 --threads 4 --timeout 300
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0

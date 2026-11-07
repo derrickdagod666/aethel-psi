@@ -1,0 +1,12 @@
+# GENEIE v2 — pinned versions actually tested with (see test_headless.py output).
+# Change vs original: TensorFlow, PyQt5, Cirq, PyQuil, pyvcf, rdkit, deepchem,
+# pyvirtualreality/pyaugmentedreality are all dropped (see README.md "What was dropped").
+pennylane==0.41.0
+autoray==0.7.1  # pinned: pennylane 0.41 breaks on autoray >=0.8 (NumpyMimic removed)
+dash==3.0.4
+plotly==6.1.0
+scikit-learn==1.7.0
+biopython==1.85
+pandas==2.3.1
+numpy==2.3.1
+scipy==1.16.0
