@@ -11,6 +11,12 @@ services:
     name: geneie-v2
     env: python
     plan: free
+    # rootDir added 2026-11-07: the first Blueprint deploy ran at the repo
+    # root and failed ("Could not open requirements file:
+    # 'requirements-deploy.txt'"). The live service was fixed in the
+    # dashboard instead (Root Directory -> geneie-v2/); this keeps the
+    # Blueprint in sync so a future re-sync builds from the right folder.
+    rootDir: geneie-v2
     buildCommand: pip install -r requirements-deploy.txt
     startCommand: gunicorn app:server --bind 0.0.0.0:$PORT --worker-class gthread --workers 1 --threads 4 --timeout 300
     envVars:
