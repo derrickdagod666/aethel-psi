@@ -38,14 +38,26 @@ What a lab would pay for:
   Bilby workflow.
 
 What has to exist first: the pip package + CI + a versioned
-release (v0.1.0). Today there is no package, no CI, no release.
-Do not sell Tier 2 until that exists.
+release (v0.1.0). **Done 2026-11-07** (see `CHANGELOG.md` and
+`PAID_TIER_PACKAGING.md`): `pyproject.toml` + `src/aethel_psi/`
+(pip-installable, Bilby 2.8.2 / Qiskit 2.6.2 pinned, clean-install
+tested in a fresh venv), CI at `.github/workflows/ci.yml`
+(waveform modifier check + Qiskit stabilizer test on every push),
+and v0.1.0 release files (`CHANGELOG.md`,
+`RELEASE_NOTES_v0.1.0.md`). The GitHub release itself still has to
+be created on the web (tag v0.1.0) — the connector cannot tag.
+Tier 2 may be offered once that release exists; no prices are set
+here and no sale has been made.
 
 ## Tier 3 — Consulting / collaboration (paid, scoped)
 
 - **Precessing-event PE**: the GW231123 full precessing PE died
-  in a VM reboot; resume it, finish it, and report the posterior
-  + Bayes factor. Same for a spin-marginalised GW200129 PE.
+  in two VM reboots and was resumed twice from its checkpoint
+  (latest 16279it, dlogz 6.92, target 0.1, 2026-11-07 — still
+  running, no posterior/Bayes factor yet); the spin-marginalised
+  GW200129 PE was launched 2026-11-07 with pre-registered priors
+  and is also running. Finish both and report the posteriors +
+  Bayes factors. See `PAID_TIER_REPORT.md`.
 - **ACT joint analyses**: extend the TT+TE+EE ripple test to new
   templates / datasets on request.
 - **Model-agnostic null testing**: apply the validation-suite
@@ -69,11 +81,18 @@ note), never a valuation of the theory.
 
 ## Next steps to make Tier 2 real
 
-1. Create the repo (see `CHECKLIST.md`).
+1. Create the repo (see `CHECKLIST.md`). — Done, live at
+   https://github.com/derrickdagod666/aethel-psi (first commit
+   9803bd4b, PDF commit cbb16405).
 2. Package `gw-pipeline/` as pip-installable (`pyproject.toml`,
-   `aethel_psi` importable package, not loose scripts).
+   `aethel_psi` importable package, not loose scripts). — Done
+   2026-11-07, v0.1.0; clean-install tested in a fresh venv.
 3. Add CI (GitHub Actions): waveform modifier check + Qiskit
-   test on every push.
+   test on every push. — Done 2026-11-07
+   (`.github/workflows/ci.yml`).
 4. Tag v0.1.0 with the Third Revised Edition PDF as the release
-   note's reference.
-5. Then — and only then — offer Tier 2 to GW groups.
+   note's reference. — **Still to do, on the web**: create tag
+   `v0.1.0` and the GitHub release (see `PAID_TIER_PACKAGING.md`
+   for the exact steps; the connector cannot tag).
+5. Then — and only then — offer Tier 2 to GW groups. No prices
+   set here; no sale until the release exists.

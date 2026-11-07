@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aethel-psi"
+version = "0.1.0"
+description = "Aethel-Psi Bilby waveform plugin: the UAF Gaussian-dip (blunted) waveform, plus the Qiskit stabilizer demo — code behind the Third Revised Edition (Nov 2026)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.13"
+authors = [
+    { name = "Derrick Irons" },
+]
+keywords = ["gravitational-waves", "bilby", "lalsuite", "qiskit", "aethel-psi"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    # Pinned to the versions used for the verified runs (2026-11-07).
+    "bilby==2.8.2",
+    "qiskit==2.6.2",
+    "qiskit-aer",
+    "lalsuite",
+    "numpy",
+    "scipy",
+    "sympy",
+]
+
+[project.urls]
+Homepage = "https://github.com/derrickdagod666/aethel-psi"
+Repository = "https://github.com/derrickdagod666/aethel-psi"
+
+[project.optional-dependencies]
+# Heavy, component-only extras — NOT installed by default.
+# ACT DR6: cobaya==3.6.2, camb==2.0.5, sacc, act_dr6_mflike (via cobaya-install)
+# Drive-code (exploratory, not run locally): torch, pennylane, faiss-cpu, pyvista, transformers, loguru
+act = ["cobaya==3.6.2", "camb==2.0.5", "sacc"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

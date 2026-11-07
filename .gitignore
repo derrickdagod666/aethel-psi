@@ -8,6 +8,9 @@ venv_*/
 *.log
 *.pickle
 .DS_Store
+.pytest_cache/
+build/
+dist/
 
 # Data — public, downloaded by the run scripts, never committed
 *.hdf5
