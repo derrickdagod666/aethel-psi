@@ -1,0 +1,72 @@
+/home/hatch/workspace/user/files/architects-of-reality/syntropic-swarm-v2/venv/lib/python3.12/site-packages/brainflow/board_shim.py:10: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[2026-11-07 08:49:15.956] [board_logger] [info] incoming json: {
+    "file": "",
+    "file_anc": "",
+    "file_aux": "",
+    "ip_address": "",
+    "ip_address_anc": "",
+    "ip_address_aux": "",
+    "ip_port": 0,
+    "ip_port_anc": 0,
+    "ip_port_aux": 0,
+    "ip_protocol": 0,
+    "mac_address": "",
+    "master_board": -100,
+    "other_info": "",
+    "serial_number": "",
+    "serial_port": "",
+    "timeout": 0
+}
+== 1. Index build ==
+Index already exists at /home/hatch/workspace/user/files/architects-of-reality/syntropic-swarm-v2/syntropic.index — use --force to rebuild.
+  [PASS] index builds ntotal=96 dim=768 in 0.0s
+== 2. Retrieval ==
+Loading embedding model...
+FAISS index loaded: 96 chunks, dim 768
+LM Studio not reachable at http://localhost:1234/v1 (HTTPConnectionPool(host='localhost', port=1234): Max retries exceeded with url: /v1/models (Caused by NewConnectionError("HTTPConnection(host='localhost', port=1234): Failed to establish a new connection: [Errno 111] Connection refused"))) — demo mode
+  [PASS] retrieval returns chunks n=3 top_L2=0.82 sources=['new-theory-third-revised.pdf', 'new-theory-third-revised.pdf', 'new-theory-third-revised.pdf']
+  [PASS] top distance is finite top_L2=0.82
+== 3. Simulator quantum job ==
+Simulator ready (Aer, local, free).
+  [PASS] quantum mode is simulator backend=aer_simulator (local)
+  [PASS] 1024 shots measured total=1024
+  [PASS] entropy in [0, 3] bits entropy=0.9995 bits counts={'111': 525, '000': 499}
+  [PASS] GHZ outcomes dominate 000+111=1024/1024
+== 4. Biometrics (simulated) ==
+  [PASS] RMSSD plausible (5-200 ms) rmssd=26.59 ms n=30
+  [PASS] bio score in [0.1, 1.0] score=0.823
+  [PASS] temperature = 1 - score temp=0.177
+== 5. Ledger round-trip ==
+  [PASS] disabled ledger refuses commit ledger disabled (opt-in toggle is OFF)
+  [PASS] enabled ledger commits committed — ledger now holds 1 nodes
+  [PASS] ledger size 1 size=1
+Ledger loaded: 1 insights.
+  [PASS] ledger persists across reload reloaded size=1
+  [PASS] ledger query returns the insight hit='Swarm Insight (bio_score 0.20): gamma is less than 0.08...'
+== 6. Demo response ==
+Loading embedding model...
+FAISS index loaded: 96 chunks, dim 768
+LM Studio not reachable at http://localhost:1234/v1 (HTTPConnectionPool(host='localhost', port=1234): Max retries exceeded with url: /v1/models (Caused by NewConnectionError("HTTPConnection(host='localhost', port=1234): Failed to establish a new connection: [Errno 111] Connection refused"))) — demo mode
+Simulator ready (Aer, local, free).
+  [PASS] demo mode (no LM Studio) mode=demo
+  [PASS] demo answer cites a source words=493 latency=0.19s
+  [PASS] telemetry has quantum + bio fields quantum=simulator bio=0.95
+== 7. Quantum intercept (Tier 3) ==
+  [PASS] tier-3 entangle runs the circuit entropy_bits=0.999
+  [PASS] no mock counts presented as IBM simulator labelled as simulator
+== 8. VQE (keyword selection + real optimisation) ==
+  [PASS] cos message selects cos-type Hamiltonian ham=[('ZZ', (1+0j)), ('IX', (0.5+0j)), ('ZI', (-0.15+0j))]
+  [PASS] other message selects generic Hamiltonian ham=[('ZZ', (1+0j)), ('XX', (1+0j))]
+  [PASS] generic VQE ground state near -2.0 (ZZ+XX) gs=-2.0000 Ha
+  [PASS] cos-type VQE returns a finite energy gs=-1.2679 Ha
+== 9. 3D visualizer (real embeddings, no dummy vectors) ==
+  [PASS] static embeddings are real model outputs n=10 dim=(768,)
+  [PASS] embeddings are deterministic (not random) same text -> same vector
+  [PASS] manifold figure has real points points=11
+== 10. EEG tracker (synthetic, labelled) ==
+  [PASS] EEG value is a float in [0.1, 1.0] value=0.710 source=BrainFlow SYNTHETIC board — simulated EEG, not a real headset brainflow_installed=True
+  [PASS] EEG loop actually computed (not the 0.95 initial) updates=2 value=0.710
+  [PASS] EEG stops cleanly stopped
+
+RESULT: 30/30 checks passed
