@@ -11,6 +11,46 @@ not for sale. γ = 0.4 is excluded; γ ≲ 0.08 for GW250114-like mergers;
 the spin-γ hypothesis is CLOSED (v6); ACT DR6 joint TT+TE+EE is null
 (global p = 0.105, A95 = 1.33×10⁻²).
 
+## UPDATE — 2026-11-07 (later the same day): the push is COMPLETE
+
+The version of this report first pushed to GitHub was written while the
+connector push was failing 403, and its §7 described that push as if it
+had gone through. **Correction, with the real record:**
+
+- The connector push **failed 403** (`POST …/git/trees: 403 Resource
+  not accessible by integration` — the GitHub App installation did not
+  include the repo). It was **not** the route that delivered the files.
+- The files went up **through the browser** as derrickdagod666, in
+  batches, directly to `main`: 14 commits to 0460b67, then the last
+  missing file, `vqe-app/test_vqe_output.txt` (948 bytes, the VQE
+  PASS output), uploaded on the first attempt with a fresh grant —
+  commit **a4e6278** (parent 0460b67), 15 commits total. **The push
+  completed 66/66 files.** The "push is blocked" wording in the
+  earlier version of this report is stale and superseded by this
+  update.
+- Since then, two more commits landed on `main`: **6e2add7** ("Add
+  GENEIE v2 demo app + Render deploy config", 10 files under
+  `geneie-v2/`) and **793a0d7** ("Fix render.yaml: set rootDir
+  geneie-v2"). Repo is at 17 commits on `main` as of this update.
+- **VQE app test status — corrected.** §5 below records the
+  hardware-efficient-ansatz run as FAIL (H2O +0.209526, NH3
+  +0.307579 Ha). That FAIL was real for that ansatz, but it is no
+  longer the app's status: the app was rebuilt with a **UCCSD**
+  ansatz from the HF reference and now **PASSES** — H2
+  +0.000117, LiH +0.000008, H2O **+0.000017**, NH3 **+0.000047**
+  Ha, all within chemical accuracy at equilibrium (see
+  `vqe-app/test_vqe_output.txt`, RESULT: PASS, commit a4e6278).
+  The §5 FAIL is kept below as history of the old ansatz, not as
+  the current result. Do not cite the FAIL as the app's status.
+- The v0.1.0 release is **CREATED** (2026-11-07 03:16 CST):
+  https://github.com/derrickdagod666/aethel-psi/releases/tag/v0.1.0
+  — tag `v0.1.0` on `main` at commit 793a0d7, title `v0.1.0`,
+  marked Latest, body is the full `RELEASE_NOTES_v0.1.0.md` text.
+  CI GREEN: run #5 on commit 793a0d7, 10 passed in 2.00 s. With the
+  release live and CI green, the paid tier may now be offered — no
+  prices set and no sale made yet. (The docs PDF was not attached
+  to the release; it stays in the repo under `docs/`.)
+
 ## Summary table
 
 | # | Item | Verdict |
@@ -334,6 +374,14 @@ no drug-efficacy claims, chemical accuracy NOT claimed.
   the surviving record and contains no secret values.
 
 ## 7. What was pushed (this report)
+
+> **Superseded in part — see the UPDATE at the top of this file.**
+> The connector ("snapshot-push") route described below **failed 403**
+> and did not deliver these files. They reached `main` through the
+> browser as derrickdagod666 (14 commits to 0460b67, plus a4e6278
+> completing 66/66), and `geneie-v2/` (6e2add7) and the render.yaml
+> fix (793a0d7) followed. The file list below is still an accurate
+> record of *what* was pushed.
 
 This push to `derrickdagod666/aethel-psi` on `main` contains:
 the v0.1.0 package (`pyproject.toml`, `src/aethel_psi/`,
