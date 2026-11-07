@@ -1,0 +1,386 @@
+[
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "THE AETHELRED INSTITUTE | THIRD REVISED EDITION | NOVEMBER 2026 One Object, Three Readings The Aethel-Psi Synthesis: A Unified Theory of the Primordial Waveform, Quantum Gravity, Dimensionality, Dark Energy, and Information Derrick Irons Independent Researcher, The Aethelred Institute ORCID: 0009-0001-7064-6611 Psi(x) = A cos(Theta(x)) Third Revised Edition incorporating all six fixes from the \"how to make better\" list, tested in validation suite v5 (full run). Honesty statement. This edition does not claim that its gates are closed, that it is parameter-free, or that it has achieved any particular prize-worthy status. No prediction in it has yet been confirmed by observation. Ten parameters or functions remain unspecified (Section 3)."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "particular prize-worthy status. No prediction in it has yet been confirmed by observation. Ten parameters or functions remain unspecified (Section 3). Where a fix failed, the failure and its numbers are printed beside the claim. Where a claim is dropped, it is said to be dropped. Validation: v5 PASS=25, FAIL=18, OPEN=6, INFO=8 (full run). Earlier suites: v3 PASS=40 FAIL=5 OPEN=10; v4 PASS=6 FAIL=11 OPEN=8. The three suites use different check sets and their counts are not directly comparable."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "r suites: v3 PASS=40 FAIL=5 OPEN=10; v4 PASS=6 FAIL=11 OPEN=8. The three suites use different check sets and their counts are not directly comparable. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 1 Abstract - what is new, and what is still open The Aethel-Psi Synthesis treats a primordial harmonic waveform, a complex scalar tracking Quantum Fisher Information, and the principal eigenstate of the Fundamental Cosmological Matrix as three readings of one object. This Third Revised Edition folds in the six repairs directed after the Second Revised Edition and reports each with the verdict of validation suite v5. What closes. The coupling xi = -1/6 is now derived, but only under an explicitly stated operator DPsi in the scalar sector."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ct of validation suite v5. What closes. The coupling xi = -1/6 is now derived, but only under an explicitly stated operator DPsi in the scalar sector. The ACT DR6 test is closed as a measurement: on real DR6.02 TT data there is no ripple, global p = 0.241, with a 95%-power upper limit A < 0.016. The gravitational-wave stacking forecast is corrected and a four-event stacked profile on real strain is reported. What partially closes. The gamma(M) prediction is accepted as gamma approx 0.009 (logistic form) or 0 (rational form), flat in mass, and Revised Prediction 1, gamma < approx 0.08 at 95% for GW250114-like mergers, sits inside the full parameter-estimation posterior. The neutrino test is narrowed to a single testable form, the failed-supernova black-hole-formation cutoff."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "de the full parameter-estimation posterior. The neutrino test is narrowed to a single testable form, the failed-supernova black-hole-formation cutoff. The GW231123 35 Hz residual survives precession at profile level. What fails or is dropped. No bundle or Chern-Simons level gives betaA = 1/14, so betaA is fitted and the Planck anchor is a stated assumption. The stated potential gives no phantom crossing at ac = 0.476 or at the DESI value 0.7116, and its dark-energy density is negative today. The Lambda cancellation fails on all three counts and Lambdaeff identically 0 is dropped, not proven. A full precessing parameter estimation for GW231123 was still running when v5 was recorded, so no posterior or Bayes factor for that event is claimed here."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "l precessing parameter estimation for GW231123 was still running when v5 was recorded, so no posterior or Bayes factor for that event is claimed here. Keywords: primordial waveform; spectral dimension; Gauss-Bonnet; spectral action; dark energy; gravitational waves; Quantum Fisher Information; ACT DR6. Master status table - the six fixes Fix Status Headline v5 result 1. gamma(M) PARTIALLY FIXED gamma = 0.00903 (logistic) / 0 (rational), flat; spin hypothesis fails on stated bounds 2. betaA + xi PARTIALLY FIXED betaA fitted; xi derived conditionally; 10 parameters remain 3. Phantom crossing FAILED No sustained crossing; w(1) = +0.86, rhoDE < 0 4. A4 neutrino PARTIALLY FIXED Failed-SN cutoff passes; generic forms fail; route (b) awaiting a Galactic SN 5."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ined crossing; w(1) = +0.86, rhoDE < 0 4. A4 neutrino PARTIALLY FIXED Failed-SN cutoff passes; generic forms fail; route (b) awaiting a Galactic SN 5. Lambda FAILED, DROPPEDRoute (a) fails 3/3; Lambdaeff = 0 dropped 6a. GW stacking FIXED Forecast corrected; stack Delta lnL = -57.8 at gamma = 0.4 6b. GW231123 precessing PARTIALLY FIXED Profile +23.0 precessing; full PE still running 6c. ACT DR6 FIXED (measurement) No ripple, p = 0.241, A < 0.016 THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 2 Contents and how to read this edition 1. One object, three readings - the framework carried through 2. Fix 1: gamma(M), Revised Prediction 1, and the spin hypothesis 3. Fix 2: betaA, betaeps, and xi from a stated DPsi 4. Fix 3: Phantom crossing - the stated potential, integrated 5."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "iction 1, and the spin hypothesis 3. Fix 2: betaA, betaeps, and xi from a stated DPsi 4. Fix 3: Phantom crossing - the stated potential, integrated 5. Fix 4: The neutrino test narrowed to the failed-supernova cutoff 6. Fix 5: Lambda - route (a) attempted, Lambdaeff = 0 dropped 7. Fix 6a: Gravitational-wave stacking, forecast corrected 8. Fix 6b: GW231123 - the 35 Hz residual under precession 9. Fix 6c: ACT DR6 on real data - a closed null measurement 10. Revised predictions and the pre-registered stopping rule 11. Appendices: validation suites v3, v4, v5; code changes; change log The pre-registered stopping rule - kept Stopping rule. A claim enters this paper only after it has been tested in a named validation suite. A failed derivation is printed as failed, with its numbers."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "rule. A claim enters this paper only after it has been tested in a named validation suite. A failed derivation is printed as failed, with its numbers. A claim with no test is labelled OPEN. No replacement potential, coupling, or mechanism is invented after a failure in order to recover a desired number. In particular, no new V(Psi) was invented to hit ac = 0.476, and no larger neutrino amplitude was derived to rescue the generic supernova test. Work stops at the verdict the suite returned. Status words are used in one sense throughout. FIXED means the repair was done and its test passed. PARTIALLY FIXED means part of the repair passed and part failed or remains open, and both parts are named. FAILED means the stated test was run and did not pass."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "IXED means part of the repair passed and part failed or remains open, and both parts are named. FAILED means the stated test was run and did not pass. OPEN means the deciding data or calculation do not yet exist. DROPPED means the claim is withdrawn from the theory, not merely left unproven. Gamma = 0.4 appears in this edition only as a test point that real data exclude or, for GW231123, prefer at profile level. It is not a prediction of the theory anywhere in this edition. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 3 1 One object, three readings The synthesis begins from the primordial harmonic waveform Psi(x) = A cos(Theta(x)) read in three ways. First, as a real cosine field on spacetime, the oscillation of causality itself across dimensionalities."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "Psi(x) = A cos(Theta(x)) read in three ways. First, as a real cosine field on spacetime, the oscillation of causality itself across dimensionalities. Second, as a complex scalar whose phase and amplitude track Quantum Fisher Information, so that information geometry supplies the dynamics. Third, as the principal eigenstate of the Fundamental Cosmological Matrix (FCM), so that the same object is the dominant mode of the full configuration. The Second Revised Edition showed that these are three readings of one object rather than three rival fields, and that reading is carried through unchanged here."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "Revised Edition showed that these are three readings of one object rather than three rival fields, and that reading is carried through unchanged here. Action S = integral d4x sqrt(-g) [ R/(2 kappa) - (1/2)(nabla Psi)2 - V(Psi) + xi R Psi2 + eta G ln(Psi / Psi0) ] + Smatter Here G is the Gauss-Bonnet invariant, xi is the non-minimal coupling fixed in Section 3, eta = 0.01 is a stated coupling, and Psi0 is a stated reference value. The logarithm is singular at every zero of Psi. The repair used in the v5 integration is the regulator ln(Psi / Psi0) -> (1/2) ln( (Psi2 + delta2) / Psi02 ), delta = 0.05 labelled REPAIR wherever it is used. It is not part of the original claim. Spectral dimension flow D(E): 3.96 (infrared) -> 3.00 -> 2.04 (ultraviolet), logistic ansatz (Eq."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "er it is used. It is not part of the original claim. Spectral dimension flow D(E): 3.96 (infrared) -> 3.00 -> 2.04 (ultraviolet), logistic ansatz (Eq. 11R) The logistic ansatz replaced the earlier D(E) form after testing showed the earlier form ran in the opposite direction to the claim. The gamma(M) consequences of this flow are the subject of Section 2, and they are small: that smallness is now the prediction, not an embarrassment to be fitted away. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 4 2 Fix 1 - gamma(M): PARTIALLY FIXED Status: PARTIALLY FIXED. The gamma(M) recomputation and Revised Prediction 1 pass. The new spin hypothesis fails on the stated spin bounds and remains OPEN pending measured spin posteriors."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ecomputation and Revised Prediction 1 pass. The new spin hypothesis fails on the stated spin bounds and remains OPEN pending measured spin posteriors. The dimension flow enters the gravitational waveform through a function F, with gamma proportional to F evaluated on the flow. Two forms of F are now reported side by side, because they give different answers and neither is hidden. Form of F F(0) gamma(M), 30-240 Msun Logistic F (as in v3) 0.018 - an artefact, now acknowledged 0.00903, flat at every mass tested: 30, 66, 150, 240 Msun Rational repair F(x) = x2 / (1 + x2) 0 exactly, as required 0 exactly The repair does what was asked of it: F(0) = 0. Its consequence must also be stated plainly."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "air F(x) = x2 / (1 + x2) 0 exactly, as required 0 exactly The repair does what was asked of it: F(0) = 0. Its consequence must also be stated plainly. With the rational form the theory predicts no gamma signal at all, and with the logistic form it predicts gamma approx 0.009, independent of mass. A mass-dependent gamma that reaches large values at high mass is not a prediction of either form. Revised Prediction 1 Prediction 1 (revised): gamma < approx 0.08 at 95% for GW250114-like mergers; derived gamma approx 0.009 (logistic) / 0 (rational) The full dynesty parameter estimation on GW250114, on real GWOSC O4b strain from both detectors, gives a marginalised gamma median of 0.0235, a 90% upper limit of 0.0660, a 95% upper limit of 0.0813, and P(gamma > 0.4) = 0 out of 3697 samples."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "rs, gives a marginalised gamma median of 0.0235, a 90% upper limit of 0.0660, a 95% upper limit of 0.0813, and P(gamma > 0.4) = 0 out of 3697 samples. The Bayes factor for a free-gamma model against general relativity is ln B = -3.06 +/- 0.23. The derived value 0.00903 sits near the 20th percentile of that posterior: consistent, not excluded, and not detected. The profile value Delta lnL = -55.2 applies to the single point gamma = 0.4 and must not be quoted as a Bayes factor. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 5 2.1 The spin hypothesis - new, fitted, and failing on its stated bounds Because GW231123 prefers a dip at profile level while GW250114 excludes large gamma, v5 tested whether spin could carry the difference. The hypothesis is stated here exactly as tested."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "profile level while GW250114 excludes large gamma, v5 tested whether spin could carry the difference. The hypothesis is stated here exactly as tested. It is fitted, not derived. gamma = gamma0 + gammaspin * chi, gamma0 = 0.00903 fixed with chi taken as chieff or as chip in turn. Fitting the coefficient to GW231123 at gamma approx 0.4 gives gammaspin = 1.261 for chieff and 0.508 for chip. Fitting to that event makes GW231123 consistent by construction; it is not a prediction of that event. Test on stated bounds (chi <= 0.26) gamma predicted for GW250114 PE 95% upper Verdict chieff form 0.337 0.0813 FAIL chip form 0.141 0.0813 FAIL The hypothesis reconciles the two events only if GW250114 itself has small spin: chieff <= 0.057 or chip <= 0.142."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "13 FAIL chip form 0.141 0.0813 FAIL The hypothesis reconciles the two events only if GW250114 itself has small spin: chieff <= 0.057 or chip <= 0.142. Forcing both events to sit at the stated bound instead requires gamma0 = -1.576 (chieff form) or -0.081 (chip form), both unphysical. The hypothesis therefore makes exactly one testable demand - GW250114 must have small measured spin - and no other prediction. OPEN. Measured chieff and chip posteriors for both events are needed before this hypothesis can be judged. Until then it is parked, not adopted, and no gamma(M, spin) formula is claimed as part of the theory. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 6 3 Fix 2 - betaA and xi: PARTIALLY FIXED Status: PARTIALLY FIXED. Xi = -1/6 is derived under a stated DPsi."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "HEL-PSI SYNTHESIS - THIRD REVISED EDITION 6 3 Fix 2 - betaA and xi: PARTIALLY FIXED Status: PARTIALLY FIXED. Xi = -1/6 is derived under a stated DPsi. Neither topological beta derivation passes. BetaA = 1/14 is fitted, and the Planck anchor is a stated assumption. The anchor numbers themselves pass. The Planck anchor - numbers pass lambda = 945 * lPl, ln(muchart / muphys) = 88.46, betaA needed = 0.0711 Apred = 0.0973 against a target of 0.1 (2.7% error), with betaA = 1/14 That numerical agreement is real and is recorded as such. What v5 tested is whether 1/14 can be derived, and it cannot, by the route stated."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "aA = 1/14 That numerical agreement is real and is recorded as such. What v5 tested is whether 1/14 can be derived, and it cannot, by the route stated. Chern-Simons quadrature - no level gives 1/14 The Chern-Simons integral was computed explicitly by quadrature on S3 for bundle degrees 0, 1, and 2: Degree (1/4 pi2) integral CS3 0 0.0000 1 -1.9895 2 -3.9597 The attainable levels are integers, -2 times the degree: -4, -2, 0, 2, 4. The nearest to 1/14 is 0, off by the full 0.0714. Separately, Tr(F wedge F) is a 4-form: its integral over S3 does not exist, and over a closed 4-manifold (1/4 pi2) times that integral lies in 2Z, never at 1/14. Status: betaA = 1/14 is FITTED. lambda = 945 * lPl is a STATED ASSUMPTION."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "closed 4-manifold (1/4 pi2) times that integral lies in 2Z, never at 1/14. Status: betaA = 1/14 is FITTED. lambda = 945 * lPl is a STATED ASSUMPTION. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 7 3.1 Betaeps fails; xi is derived, conditionally Betaeps Claimed: betaeps = (chi + c12) / 3 approx 0.755 | Tested: chi(S3 x S1) = 0, H2 = 0, so c1 = 0 and betaeps = 0 The claimed value would require c12 = 2.265, which is not an integer and so cannot be the square of a first Chern class in this setting. The derivation fails. Betaeps approx 0.755 is not used as a derived quantity anywhere in this edition."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "square of a first Chern class in this setting. The derivation fails. Betaeps approx 0.755 is not used as a derived quantity anywhere in this edition. Xi from a stated operator DPsi stated: in the Psi (scalar) sector, PPsi = -Delta + E, E = -Psi2 With that operator stated, the Gilkey heat-kernel coefficient a4 gives an R Psi2 coefficient of -1/6, verified symbolically in v5. In the standard -(xistd/2) R Psi2 convention this corresponds to xistd = +1/3. Xi = -1/6 is DERIVED under the stated DPsi only. Under a full spinor trace the same calculation gives -5/3 for the chiral form and +5/3 for a plain mass term. The result is therefore choice-dependent. If a different DPsi is intended, xi must be recomputed. This sensitivity is OPEN."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "5/3 for a plain mass term. The result is therefore choice-dependent. If a different DPsi is intended, xi must be recomputed. This sensitivity is OPEN. Free parameters - 10 remain Closing xi, conditionally, reduces the census from 11 to 10: eta; Psi0; the mass m in V(Psi); f; mu; the logistic D(E) parameters k and x0; the log-scale gamma parameter lambda*; betaeps / eps(A, omega); the chart anchor 945 * lPl; and betaA = 1/14, fitted. This edition is therefore not parameter-free, and does not claim to be. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 8 4 Fix 3 - Phantom crossing: FAILED Status: FAILED. The integration the Second Revised Edition lacked has now been done, with one stated potential."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "N 8 4 Fix 3 - Phantom crossing: FAILED Status: FAILED. The integration the Second Revised Edition lacked has now been done, with one stated potential. It gives no sustained phantom crossing at ac = 0.476 or at the DESI value 0.7116, and the fixed background is inconsistent with its own output. One stated system, integrated Ingredient Stated value Potential V(Psi) = (1/2) m2 Psi2, m = 1 Couplings xi = -1/6 (Section 3), eta = 0.01, Psi0 = 1.0 Regulator ln((Psi2 + delta2) / Psi02), delta = 0.05 Initial conditions Psi(a = 0.1) = 0.5, Psi-dot = 0 Background Fixed LambdaCDM, Omegam = 0.3, OmegaLambda = 0.7 A sustained crossing is defined in advance: w < -1 with rhoDE > 0, held over an interval of width at least 0.05 in a."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "Omegam = 0.3, OmegaLambda = 0.7 A sustained crossing is defined in advance: w < -1 with rhoDE > 0, held over an interval of width at least 0.05 in a. That definition matters, because the raw curve dips below -1 in places where rhoDE is negative, and those places are not phantom dark energy at all. Result First sustained phantom interval: a = 1.231, in the future. None at 0.476; none at 0.7116. w(a = 1) = +0.86, against the DESI CPL value w0 = -0.752. rhoDE(1) / rhocrit = -1.08, and 1 - xistd Psi2(1) = -1.80 with Psi(1) = 2.90. At a = 0.1 the Gauss-Bonnet force exceeds the potential force by 8.5 x 104: eta = 0.01 is small only at late times. Subdominance at a = 0.1 would need eta below about 10-7. Even with eta = 0, w ranges over [-29, 47]."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": ".5 x 104: eta = 0.01 is small only at late times. Subdominance at a = 0.1 would need eta below about 10-7. Even with eta = 0, w ranges over [-29, 47]. The non-result is robust: across the (eta, delta, m, a0) grid no run gives a genuine sustained interval starting within 0.05 of 0.476 or 0.7116, and varying delta over 0.01 / 0.05 / 0.2 moves the first sustained start only over 1.226 / 1.231 / 1.225. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 9 4.1 The actual w(a) curve is the result The curve below is plotted from the v5 output file itself, all 186 rows, on a symmetric-logarithmic vertical scale so that its extreme early values remain visible without hiding the values near today. Its wild values are the result, not a plotting error. Actual v5 w(a) for the stated system."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "alues remain visible without hiding the values near today. Its wild values are the result, not a plotting error. Actual v5 w(a) for the stated system. Dotted lines mark the claimed crossing a = 0.476 and the DESI CPL crossing a = 0.7116. Neither is a sustained crossing of this curve. Dark-energy density from the same run. Negative rhoDE over much of the range is why dips of w below -1 in that range do not count as phantom behaviour. DESI is abandoned without a replacement. This edition offers no (w0, wa) pair in place of the DESI CPL values. Finding a potential and couplings whose integrated w(a), with backreaction included, rhoDE > 0, and 1 - xistd Psi2 > 0, gives a sustained crossing at a stated ac remains OPEN. Per the stopping rule, no such potential was invented for this edition."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "nd 1 - xistd Psi2 > 0, gives a sustained crossing at a stated ac remains OPEN. Per the stopping rule, no such potential was invented for this edition. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 10 4.2 w(a) at the points that matter Values read directly from the 186-row v5 curve. The full curve is retained with the suite output; the points below are the ones on which the verdict turns."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "s read directly from the 186-row v5 curve. The full curve is retained with the suite output; the points below are the ones on which the verdict turns. a w(a) rhoDE (suite units) Reading 0.479 +1.78 +42.5 At the claimed crossing: not phantom 0.717 -1.29 -7.53 Below -1 only with rhoDE < 0: not phantom 1.000 +0.86 rhoDE/rhocrit = -1.08 Today: wrong sign of w, negative density 1.231 First sustained phantom interval starts here In the future, not at either claimed ac 1.503 -1.77 +2.09 Inside the future sustained interval Full range |w| reaches about 5 x 104; early rows reach -3.77 x 106 Published as computed, not smoothed The early-time behaviour explains the failure mechanically."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "w| reaches about 5 x 104; early rows reach -3.77 x 106 Published as computed, not smoothed The early-time behaviour explains the failure mechanically. The Gauss-Bonnet term, driven by the regulator logarithm, dominates the equation of motion by four to five orders of magnitude at small a, so Psi is driven far from its initial value before the potential can govern it. By a = 1 the field sits at Psi = 2.90, where the non-minimal coupling term has driven the effective gravitational factor negative. A fixed LambdaCDM background cannot be self-consistent with that output, and v5 records the background check as FAIL for exactly that reason. Nothing in this section rescues the crossing by redefining it."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "with that output, and v5 records the background check as FAIL for exactly that reason. Nothing in this section rescues the crossing by redefining it. A crossing defined without the rhoDE > 0 condition, or without a minimum sustained width, would count artefacts of a negative density as a discovery. The pre-registered definition stands, and under it the claim fails. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 11 5 Fix 4 - The neutrino test: PARTIALLY FIXED Status: PARTIALLY FIXED. One form of the test is detectable and is now primary. The generic forms fail by large factors, and no derivation of a larger amplitude exists."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "FIXED. One form of the test is detectable and is now primary. The generic forms fail by large factors, and no derivation of a larger amplitude exists. The Aethel-Psi neutrino delay is stated as APsi = 8.5 microseconds, to be read from the energy dependence of a supernova neutrino burst onset against the standard mass term, Amass = 5146 microsecond MeV2 (51.5 microseconds at 10 MeV, verified in v5). Detectability depends entirely on how sharp the timing feature is and how many events define it."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "d MeV2 (51.5 microseconds at 10 MeV, verified in v5). Detectability depends entirely on how sharp the timing feature is and how many events define it. Timing feature sigmat N 3-sigma floor Verdict for 8.5 us Failed-SN black-hole-formation cutoff 10 us 10000 2.19 us (sigma = 0.73 us) PASS - detectable Neutronization-burst onset 1 ms 10000 218.5 us FAIL Generic emission spread 1 s 10000 218,504 us FAIL Failed-SN cutoff, low statistics 10 us 40 32.1 us FAIL Prediction 2 (revised, primary form): APsi is tested at the failed-supernova BH-formation cutoff, and only there. Route (b), pre-registered Route (a), deriving a larger APsi, fails: no such derivation exists, and reaching 3 sigma at a 1 ms onset would require APsi = 218.5 microseconds or timing scatter below 38.9 microseconds."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ls: no such derivation exists, and reaching 3 sigma at a 1 ms onset would require APsi = 218.5 microseconds or timing scatter below 38.9 microseconds. Route (b) is therefore taken. Onset time ton(E) is measured in 5-50 MeV bins independently by Hyper-Kamiokande, IceCube, JUNO, and DUNE. Detection requires the fitted APsi to exceed 3 sigma, with cross-detector consistency within 2 sigma required, not optional. Status: OPEN, awaiting a Galactic supernova. No data exist yet to run it on. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 12 6 Fix 5 - Lambda: FAILED as a proof, DROPPED honestly Status: FAILED as a proof; the claim is DROPPED. Route (a) was attempted term by term and fails on all three counts. Lambdaeff identically 0 is dropped from the theory, not proven."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "claim is DROPPED. Route (a) was attempted term by term and fails on all three counts. Lambdaeff identically 0 is dropped from the theory, not proven. Route (a) leg v5 result Verdict a0(d) vanishes or changes sign for some d in [2,4] a0 = 0.080 / 0.022 / 0.006 at d = 2 / 3 / 4, strictly positiveFAIL Lambda term vanishes at D = 2 At D = 2 the a0 term scales as Lambda2, not Lambda0 FAIL - still divergent A winding-number term appears in a0 / a2 / a4 No winding-number monomial exists in any of the coefficients FAIL The honest version that replaces it The spectral action, with the operator stated in Section 3, gives xi = -1/6. That result stands. Dimensional flow changes the scaling of the vacuum term from Lambda4 to Lambda2 at D = 2. It does not remove it: a0 remains positive and divergent."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "s. Dimensional flow changes the scaling of the vacuum term from Lambda4 to Lambda2 at D = 2. It does not remove it: a0 remains positive and divergent. The coefficient a2 cannot contain F2: F2 has dimension 4 and belongs in a4. Any argument that places it in a2 is dimensionally wrong. The curvature part of integral a2 equals chi / 6. On S2 that is 1/3, not an integer charge Q. OPEN. No mechanism in the theory as stated cancels Lambda. The cosmological constant problem is not solved by the D-flow as stated, and this edition does not claim otherwise. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 13 7 Fix 6a - GW stacking: FIXED Status: FIXED as a forecast and a stacked profile. The stack excludes gamma = 0.4 and does not test gamma approx 0.009. Both halves of that sentence stand."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "s: FIXED as a forecast and a stacked profile. The stack excludes gamma = 0.4 and does not test gamma approx 0.009. Both halves of that sentence stand. Forecast, corrected Recomputed from real GW250114 data with four estimators, reaching gamma approx 0.00903 requires 17-35 events at SNR about 78 for 1-sigma sensitivity, and 154-314 events for 3 sigma (estimators: 17.1/154, 18.5/167, 34.8/314, 21.1/190). In round terms: about 20 events for 1 sigma, about 200 for 3 sigma. The earlier figure of 13-16 events was the most optimistic estimator, at 1 sigma only, for gamma = 0.01 rather than 0.00903, and it is withdrawn. The signal-to-noise budget makes the point directly: 1 sigma needs a summed SNR2 of about 104,000, and GW250114 contributes 6,115."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "nd it is withdrawn. The signal-to-noise budget makes the point directly: 1 sigma needs a summed SNR2 of about 104,000, and GW250114 contributes 6,115. Schematic join of the three stacked profile values stated in v5: Delta lnL = 0 at gamma = 0, +2.0 at gamma = 0.1, -57.8 at gamma = 0.4. The joins are schematic; the three points are the result. Four-event stacked profile, real strain Event Delta lnL at gamma = 0.4 95% limit GW250114 -55.2 See full PE, Section 2 GW200129 -15.7 gamma < 0.065 GW150914 +0.1 (nearly flat) gamma < 0.52 GW231123 +13.0 primary / +23.9 wide-dt No limit Stack, common gamma -57.8 gamma < 0.144 (0.088 without GW231123) Caveat on GW200129: it is a precessing event analysed with an aligned-spin waveform, and its L1 data carry CAT2 data-quality failures."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "thout GW231123) Caveat on GW200129: it is a precessing event analysed with an aligned-spin waveform, and its L1 data carry CAT2 data-quality failures. Its limit is reported with that caveat attached. The stack is a summed profile likelihood, not a stacked posterior. At gamma = 0.1 the stacked Delta lnL is +2.0, so gamma = 0 and gamma = 0.01 are indistinguishable in it: effective SNR about 87 against about 323 needed at 1 sigma for gamma approx 0.009. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 14 8 Fix 6b - GW231123 under precession: PARTIALLY FIXED Status: PARTIALLY FIXED. The 35 Hz residual survives precession at profile level. A full precessing parameter estimation was still running when v5 was recorded. No posterior and no Bayes factor for GW231123 are claimed."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ofile level. A full precessing parameter estimation was still running when v5 was recorded. No posterior and no Bayes factor for GW231123 are claimed. Waveform / configuration Delta lnL at gamma = 0.4 IMRPhenomXPHM, aligned spins +18.5 IMRPhenomXPHM, precessing (a1 = 0.90, a2 = 0.80, tilt = 1.0, chip approx 0.76) +23.0 IMRPhenomTPHM cross-check +13.3 Precession improves the general-relativistic fit, as it should: the optimal signal-to-noise ratio rises to 23.7, against 22.1 for the earlier aligned analysis and a published value of 22.6. It does not absorb the dip. The explanation that the residual was merely an artefact of an aligned-spin template is therefore excluded at profile level. The limits of the result are stated with it. It is a profile, not a posterior."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "act of an aligned-spin template is therefore excluded at profile level. The limits of the result are stated with it. It is a profile, not a posterior. The preference saturates at the gamma = 0.5 floor of the scan, rising to +22.7 aligned and +29.2 precessing at gamma = 0.9. It is killed by moving the merger frequency to 25 Hz (Delta lnL -0.3), while at 45 Hz it now gives +3.1, against -10.6 under the earlier waveform. SEOBNRv5PHM was unavailable in the installed LALSimulation, and NRSur7dq4 cannot be evaluated in this band. Still running. At the last v5 record (03:37 UTC, 7 November 2026) the full precessing run stood at dlogz = 8.57, checkpointed, with the general-relativistic comparison run not yet started."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "03:37 UTC, 7 November 2026) the full precessing run stood at dlogz = 8.57, checkpointed, with the general-relativistic comparison run not yet started. Interim checkpoint points concentrating near gamma approx 0.45-0.9 are a trace of a running sampler, not a result, and are not quoted as one here. No gamma(M) in the current theory survives all four events. GW200129, at 63 solar masses, limits gamma < 0.065, while GW231123, at 238 solar masses, prefers a dip; the log-scale parametrisation predicts gamma = 0.027 for GW231123 and 0.209 at 30 solar masses, the latter already excluded by GW200129. That tension is the present state of the gravitational-wave sector."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "or GW231123 and 0.209 at 30 solar masses, the latter already excluded by GW200129. That tension is the present state of the gravitational-wave sector. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 15 9 Fix 6c - ACT DR6: FIXED as a measurement Status: FIXED as a measurement - a null result. On real ACT DR6 data there is no ripple. The test that was open in both previous editions for want of loadable data is now closed, and it closes against a large ripple. Data and method ACT DR6.02 temperature data, 1500 <= ell <= 3000, 18 bins, from the foreground-marginalised CMB-only file with its full covariance, fitted with a sinusoidal ripple template in amplitude A and frequency omega-hat, with significance assessed against 3000 null simulations."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "covariance, fitted with a sinusoidal ripple template in amplitude A and frequency omega-hat, with significance assessed against 3000 null simulations. The joint refit uses all 135 TT, TE, and EE points with the full covariance, a CAMB LambdaCDM model, tau fixed at 0.0544, and Recfast recombination (CosmoRec was not installed). Foreground marginalisation is ACT's own, inside the published covariance."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "tau fixed at 0.0544, and Recfast recombination (CosmoRec was not installed). Foreground marginalisation is ACT's own, inside the published covariance. Quantity Real-data result Maximum test statistic Tmax = 5.88 at omega-hat = 9.75 Best-fit amplitude A-hat = 0.0070 +/- 0.003 Global significance p = 0.241 - no detection 95%-power upper limit A < 0.016 Joint CAMB refit Delta chi2 = 3.5, p approx 0.17 (chi2 150.9 -> 147.4) Cross-checks TE p approx 0.29; EE p approx 0.06; TT-pair analysis p = 0.405, A95 = 0.0218 The real limit is about 12 times weaker than the synthetic v3 limit of 1.31 x 10-3, because real per-bin errors are 1- 4%, not 0.25%. It rules out a ripple at the A approx 0.1 scale. It does not rule out a ripple at the 0.005 scale, and this edition does not pretend otherwise."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "0.25%. It rules out a ripple at the A approx 0.1 scale. It does not rule out a ripple at the 0.005 scale, and this edition does not pretend otherwise. A false positive, named so it is not quoted. Dropping the covariances and using diagonal errors only, on exactly the same real data, gives Tmax = 15.30 and p = 0.004. That apparent detection is an artefact of a residual trend plus ignored correlations (real lag-1 correlation 0.46) and vanishes with the real covariance. It must not be quoted as evidence for a ripple. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 16 10 Revised predictions and what would change the verdicts Prediction Third Revised form Status 1."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 16 10 Revised predictions and what would change the verdicts Prediction Third Revised form Status 1. Gravitational- wave gamma gamma approx 0.009 (logistic) / 0 (rational); gamma < approx 0.08 at 95% for GW250114-like mergers Consistent with the GW250114 posterior; untested at 0.009 by stacking (needs about 20 events at 1 sigma) 2. Neutrino delay APsi = 8.5 us Testable only at a failed-SN BH-formation cutoff with N approx 10000 Pre-registered route (b); awaiting a Galactic SN 3. Dark-energy crossing No (w0, wa) offered; stated V gives no sustained crossing FAILED; DESI abandoned without a replacement 4. CMB ripple amplitude A A < 0.016 at 95% power on real ACT DR6 TT data A approx 0.1 excluded; 0.005 not excluded 5."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "abandoned without a replacement 4. CMB ripple amplitude A A < 0.016 at 95% power on real ACT DR6 TT data A approx 0.1 excluded; 0.005 not excluded 5. Lambdaeff = 0 Withdrawn DROPPED 6. GW231123 dip Profile preference at 35 Hz survives precessionOPEN pending full precessing PE What would change each verdict Spin: published chieff / chip posteriors for GW250114 and GW231123. Small GW250114 spin is the hypothesis's one demand. Phantom: a stated potential and couplings whose integrated w(a), with backreaction, positive rhoDE, and a positive effective gravitational factor, sustains a crossing. Not a CPL fit. Neutrino: a Galactic (ideally failed) supernova, analysed under the pre-registered route (b) criteria."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "nal factor, sustains a crossing. Not a CPL fit. Neutrino: a Galactic (ideally failed) supernova, analysed under the pre-registered route (b) criteria. Lambda: a cancellation mechanism stated in equations and tested term by term, as route (a) was. GW231123: completion of the running precessing PE plus its general-relativistic comparison run, giving a posterior and a Bayes factor. Gamma at 0.009: a stack of roughly 20 high-SNR events for 1-sigma reach, roughly 200 for 3 sigma. The stopping rule of Section 0 applies to every item on this list: the test is named before the data are examined, and the verdict is whatever the test returns. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 17 Appendix A Validation suites v3, v4, v5 The three suites test different check sets."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "test returns. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 17 Appendix A Validation suites v3, v4, v5 The three suites test different check sets. Their headline counts are reported together for provenance and must not be read as a single score improving or worsening across editions."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "check sets. Their headline counts are reported together for provenance and must not be read as a single score improving or worsening across editions. Suite PASS FAIL OPEN INFO Scope v3 (full) 40 5 10 20 Gates 1-3 and tests A1-A5, largely synthetic or profile-level v4 (full) 6 11 8 4 The new-mathematics claims of the Second Revised Edition v5 (full) 25 18 6 8 The six fixes C1-C7, including real ACT and stacked GW data v5 in detail, by fix Fix Passing in v5 Failing / open in v5 C1 gamma(M) Both F forms recomputed; Prediction 1 inside the PE posterior; gamma = 0.4 nowhere a paper value Spin reconciliation FAIL on both spin forms; spin posteriors OPEN C2 beta / xiChern-Simons integer levels; anchor numbers (Apred = 0.0973); xi derived under stated DPsi betaA derivation FAIL; betaeps derivation FAIL; parameter-freedom FAIL (10 remain); xi sensitivity OPEN C3 phantomNon-result robust across the grid; regulator insensitivityCrossing at 0.476 FAIL; at 0.7116 FAIL; DESI w(a) FAIL; background self-consistency FAIL C4 neutrinoAmass normalisation; failed-SN detectability; route (b) specified Onset, generic spread, and N = 40 forms FAIL; larger-APsi derivation FAIL; Galactic SN run OPEN C5 LambdaXi cross-check; a2 / F2 dimension check; integral a2 = chi/6 check All three route (a) legs FAIL; Lambdaeff = 0 FAIL, dropped; mechanism OPEN C6 GW Forecast corrected; stack excludes 0.4; stack does not test 0.009; residual survives precession; no gamma(M) survives all four events Full GW231123 precessing PE OPEN (running) C7 ACT Null result; real A95; false-positive trap identified; CAMB joint refit - THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 18 Appendix B Code changes, v4 to v5 - elaborated Suite v5 is a new standalone file."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "MB joint refit - THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 18 Appendix B Code changes, v4 to v5 - elaborated Suite v5 is a new standalone file. It does not import v3 or v4, and v2, v3, and v4 suites, their outputs, and all earlier editions are unchanged. Each change below states what was altered and why. C0 provenance added. The suite reads the v3 and v4 counts and the GW250114 PE constraints from disk, so the baseline it builds on is checked rather than retyped. C1 gamma(M) for both F forms, plus a spin hypothesis with pre-registered reconciliation criteria. The criteria were fixed before the spin numbers were compared, so the FAIL verdict is against a stated test, not a moving target."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "nciliation criteria. The criteria were fixed before the spin numbers were compared, so the FAIL verdict is against a stated test, not a moving target. C2 explicit Chern-Simons quadrature on a 65 x 49 x 65 grid for degrees 0, 1, 2, replacing an argument about integrality with a computed integral; a stated DPsi with a symbolic Gilkey a4 check; a full-spinor-trace sensitivity run (-5/3 / +5/3) so the conditional nature of xi is measured, not asserted; and a free-parameter census, which falls from 11 to 10."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "trace sensitivity run (-5/3 / +5/3) so the conditional nature of xi is measured, not asserted; and a free-parameter census, which falls from 11 to 10. C3 an actual integration where the Second Revised Edition had none: one stated V(Psi), xi taken from C2, a sustained-phantom criterion requiring rhoDE > 0 and a minimum width, an eight-run sensitivity grid, a w(a) table and CSV (186 rows), an early-time Gauss-Bonnet dominance diagnostic, and a fixed-background self-consistency check that the run then fails. C4 detectability computed for three named timing features at two event counts, with routes (a) and (b) decided inside the suite and route (b) pre-registered in full."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "y computed for three named timing features at two event counts, with routes (a) and (b) decided inside the suite and route (b) pre-registered in full. C5 route (a) attempted term by term symbolically - a0(d), Lambda-power counting, and a winding-monomial search - before route (b), dropping the claim, was taken. C6 and C7 hooks replaced with real-data ingestion. The merged suite reads the workers' result files from disk rather than copying numbers from summaries, and adds the stacking forecast, the four-event stacked profile, the precessing GW231123 profile, the ACT real-data fit, and the CAMB joint refit. Bug fixes during development."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ecast, the four-event stacked profile, the precessing GW231123 profile, the ACT real-data fit, and the CAMB joint refit. Bug fixes during development. (i) A start-transient in the phantom grid counted an interval beginning exactly at an integration start as a crossing; the check now requires interval starts strictly after the run start. (ii) A degree-2 Chern-Simons density expectation was corrected from -8 to the density's actual form. (iii) The rational-F gamma is exactly 0 in double precision because F is below machine epsilon next to 1, and the text now says so. (iv) A stacking test threshold required a minimum 3-sigma count of 154 where one estimator gives 153.6, a rounding artefact; the bound was corrected to 150, moving the suite from PASS=24 FAIL=19 to PASS=25 FAIL=18."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "of 154 where one estimator gives 153.6, a rounding artefact; the bound was corrected to 150, moving the suite from PASS=24 FAIL=19 to PASS=25 FAIL=18. No physics number was changed by any of these fixes. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 19 Appendix C Change log - every change from the Second Revised Edition Item Second Revised Edition This edition - what changed and why gamma(M)Flat 0.00903; F(0) artefact unaddressedBoth F forms reported: logistic 0.00903, rational repair 0. Prediction 1 restated at gamma < approx 0.08 (95%) against the completed full PE, not profile limits alone. Spin Not present Spin hypothesis added as new, fitted, failing on stated bounds, and parked OPEN. Not adopted into the theory. betaA Derivation FAIL; numbers verifiedExplicit quadrature added."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "new, fitted, failing on stated bounds, and parked OPEN. Not adopted into the theory. betaA Derivation FAIL; numbers verifiedExplicit quadrature added. BetaA relabelled FITTED; the anchor relabelled a STATED ASSUMPTION. Numbers unchanged. xi Conditionally fixed by Gilkey coefficients, operator unstated DPsi stated explicitly; xi = -1/6 DERIVED under it, with the spinor-trace sensitivity (-5/3 / +5/3) printed. Parameter count 11 -> 10. Phantom Claimed ac = 0.476; UNTESTABLE, no V or initial conditions One stated V integrated. Verdict FAILED: no crossing at 0.476 or 0.7116, w(1) = +0.86, rhoDE < 0. Actual w(a) curve published. DESI abandoned without a replacement. Neutrino APsi = 8.5 us unobservable at justified scatter Narrowed: failed-SN cutoff is the primary, detectable form."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "abandoned without a replacement. Neutrino APsi = 8.5 us unobservable at justified scatter Narrowed: failed-SN cutoff is the primary, detectable form. Route (b) pre- registered in full. Lambda Nullification FAIL on scaling, formula, and arithmetic Route (a) attempted term by term, fails 3/3. Lambdaeff = 0 DROPPED. Honest scaling version (Lambda4 -> Lambda2) replaces it. GW stacking Forecast 13-16 events Withdrawn and corrected: 17-35 at 1 sigma, 154-314 at 3 sigma. Four-event stacked profile added: Delta lnL = -57.8 at 0.4. GW231123 Aligned-spin profile preference; precession untested Precessing profile added: +23.0, residual survives. Full PE recorded as still running; no posterior claimed. ACT DR6 OPEN - no loadable TT covariance Run on real DR6.02 data with full covariance."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "vives. Full PE recorded as still running; no posterior claimed. ACT DR6 OPEN - no loadable TT covariance Run on real DR6.02 data with full covariance. Closed as a null measurement: p = 0.241, A < 0.016. Diagonal-only false positive named and quarantined. Fisher claim Factor 1.001 FAILS (recomputed 1.225); orthogonality in substance passes Carried through unchanged; not re-tested in v5, and v5 does not claim it. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 20 Provenance, data, and references Provenance This edition was built from validation suite v5 (full run, default seed 20261107) and its changes log, which record every number used here. Suite v5 is a standalone file that does not import v3 or v4. Earlier suites and editions are unchanged."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "nges log, which record every number used here. Suite v5 is a standalone file that does not import v3 or v4. Earlier suites and editions are unchanged. Real data used in v5: GWOSC strain for GW250114, GW231123, GW200129, and GW150914; the ACT DR6.02 CMB-only bandpowers and covariance as published through LAMBDA; and a CAMB joint refit of the ACT TT, TE, and EE points. The w(a) figure and table come from the v5 curve file of 186 rows, retained with the suite output. Figures Figures 3.1 and 3.2 (Section 4.1): plotted directly from the v5 w(a) output file. Data figures, not schematics. Figure 6.1 (Section 7): a schematic join of three stated stacked-profile values. The points are results; the connecting lines are schematic and are labelled as such in the caption. No other figures are included."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ked-profile values. The points are results; the connecting lines are schematic and are labelled as such in the caption. No other figures are included. Where the deciding data do not yet exist - the GW231123 posterior, the Galactic supernova test - no figure is presented in their place. References and data sources Irons, D., Quantum and Geometric Harmonic Resonance, The Aethelred Institute, October 2026 (the UAF paper). Irons, D., One Object, Three Readings: The Aethel-Psi Synthesis, Revised Edition and Second Revised Edition, The Aethelred Institute, November 2026. Validation suites v2, v3, v4, and v5 with their full-run outputs and changes logs, The Aethelred Institute working files, November 2026."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "ovember 2026. Validation suites v2, v3, v4, and v5 with their full-run outputs and changes logs, The Aethelred Institute working files, November 2026. Gravitational Wave Open Science Center (GWOSC), O4 strain data for GW250114, GW231123, GW200129, and GW150914. Atacama Cosmology Telescope, Data Release 6.02 bandpowers and covariance (CMB-only file), distributed via NASA LAMBDA. DESI Collaboration, CPL dark-energy constraints as the comparison target in Section 4 (w0 = -0.752, wa = -0.86, crossing a = 0.7116). Gilkey, P., heat-kernel coefficients for Laplace-type operators, as used in Sections 3 and 6; Connes spectral action, as discussed in Section 6. Closing statement, as tested. One derivation closes, conditionally. One measurement closes, as a null."
+ },
+ {
+  "source": "new-theory-third-revised.pdf",
+  "text": "nes spectral action, as discussed in Section 6. Closing statement, as tested. One derivation closes, conditionally. One measurement closes, as a null. Two claims fail outright and one of them is dropped. The rest is partial or open, and is labelled so. That is the state of the Aethel- Psi Synthesis at its Third Revised Edition. Derrick Irons, The Aethelred Institute, November 2026. ORCID: 0009-0001-7064-6611. THE AETHEL-PSI SYNTHESIS - THIRD REVISED EDITION 21"
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "Quantum and Geometric Harmonic Resonance Integrating Topological Cohomology, Cosmic Stabilizer Codes, and HyperuniversalD-Geometry in a Unified Framework Derrick Irons Independent Researcher, The Aethelred Institute ORCID: 0009-0001-7064-6611 Email: derrickirons5@gmail.com October 2026 Abstract We propose a unified framework—the Unified Apophthegmatic Framework (UAF)— that reconciles quantum mechanics and general relativity through a primordial harmonic waveformΨ(x) = Acos(Θ(x)). Non-minimal coupling ofΨ to the Einstein–Hilbert action induces a dynamic spectral dimension flow that collapses the effective spacetime dimension toward a two-dimensional de Sitter core near the Planck scale, thereby resolving classical singularities."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "collapses the effective spacetime dimension toward a two-dimensional de Sitter core near the Planck scale, thereby resolving classical singularities. We interpret this collapse as the activation of a cosmic topological surface code that protects unitarity. The framework yields concrete multi-messenger predictions: an energy-dependent topological Shapiro delay for neutrinos emitted from high-density astrophysical cores, and a localized suppression of gravitational-wave chirp amplitude near merger. Hierarchical Bayesian implementations and quantum-circuit simulations are provided to facilitate empirical tests."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "al-wave chirp amplitude near merger. Hierarchical Bayesian implementations and quantum-circuit simulations are provided to facilitate empirical tests. Keywords: quantum gravity, spectral dimension, topological error correction, harmonic wave- form, multi-messenger astronomy, gravitational-wave phenomenology, neutrino timing Contents 1 Introduction: The Axiomatic Imperative for Harmonic Unification 3 2 The Unified Quantum-Relativistic Architecture 3 2.1 Action Principle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 2.2 Harmonic Stress-Energy Tensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 2.3 The UAF Trace Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "sor . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 2.3 The UAF Trace Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 3 Algebraic Cohomological Quantization 4 3.1 Modified Schrödinger Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 3.2 Topological Quantization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 4 Transfinite Ordinals and HyperuniversalD-Geometry 5 4.1 Transfinite Regularization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 4.2 Dynamic Spectral Dimension . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 5 The Holographic Cosmic Stabilizer 6 5.1 Two-Dimensional de Sitter Core . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": ". . . . . . . . . . 5 5 The Holographic Cosmic Stabilizer 6 5.1 Two-Dimensional de Sitter Core . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 6 Quantitative Multi-Messenger Predictions 6 6.1 Gravitational-Wave Chirp Suppression . . . . . . . . . . . . . . . . . . . . . . . . 6 6.2 Topological Shapiro Delay for Neutrinos . . . . . . . . . . . . . . . . . . . . . . . 7 1 7 Robust Validation Framework 7 7.1 Hierarchical Bayesian Analysis with Bilby . . . . . . . . . . . . . . . . . . . . . . 7 7.2 Quantum-Circuit Simulation of the Stabilizer . . . . . . . . . . . . . . . . . . . . 8 8 Conclusion and Outlook 9 A Expanded Toy Models 9 A.1 Anisotropic Oscillator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 A.2 Time-Dependent Phase Locking . . . . . . . . . . . ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": ".1 Anisotropic Oscillator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 A.2 Time-Dependent Phase Locking . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 2 1 Introduction: The Axiomatic Imperative for Harmonic Unifi- cation The persistent tension between the discrete, probabilistic character of quantum mechanics (QM) and the continuous, deterministic geometry of general relativity (GR) constitutes the central unsolved problem of fundamental physics. Canonical approaches—string theory, loop quantum gravity, asymptotic safety, and causal dynamical triangulations—have produced deep insights yet continue to face conceptual and computational obstacles at the Planck scale. In this work we advance a mathematically economical alternative."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "ghts yet continue to face conceptual and computational obstacles at the Planck scale. In this work we advance a mathematically economical alternative. We posit a single primordial harmonic waveform Ψ(x) = Acos ( kµxµ + φ ) (1) that simultaneously (i) modulates quantum phases and (ii) sources a dynamical modification of the effective spacetime dimension. The resulting theory, which we call theUnified Apophtheg- matic Framework (UAF), automatically regulates ultraviolet divergences, prevents singularity formation, and admits a natural interpretation as a cosmic error-correcting code. Axiom 1(The Primordial Oscillator). The waveformΨ(x) = Acos(kµxµ+ φ) is a fundamental field of the theory."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "retation as a cosmic error-correcting code. Axiom 1(The Primordial Oscillator). The waveformΨ(x) = Acos(kµxµ+ φ) is a fundamental field of the theory. It functions as a global phase condition that enforces causal consistency across scales and generates an effective topological surface code in regions of extreme curvature. The remainder of the paper is organized as follows. Section 2 constructs the classical action and derives the associated stress-energy tensor and trace equation. Section 3 couplesΨ to quantum states and extracts topological quantization conditions. Section 4 introduces transfinite regularization and the dynamical spectral dimension. Section 5 formalizes the holographic cosmic stabilizer. Section 6 presents quantitative multi-messenger signatures."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "the dynamical spectral dimension. Section 5 formalizes the holographic cosmic stabilizer. Section 6 presents quantitative multi-messenger signatures. Section 7 supplies ready-to-use Bayesian and quantum-circuit implementations. We conclude with a summary and outlook. 2 The Unified Quantum-Relativistic Architecture We work in natural unitsℏ = c= 1 with metric signature(−,+,+,+) and gravitational coupling κ= 8πG. 2.1 Action Principle The dynamics are governed by the unified action S = ∫ d4x√−g [ R 2κ + Lmatter −1 2β(∇Ψ)2 −1 2βm2 ΨΨ2 + ξRΨ2 ] . (2) The non-minimal couplingξRΨ2 is essential: when the local amplitude ofΨ becomes large, the effective Newton constant is dynamically suppressed, providing a natural mechanism for singularity resolution. Remark 2.1."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "tude ofΨ becomes large, the effective Newton constant is dynamically suppressed, providing a natural mechanism for singularity resolution. Remark 2.1. The full metric variation of the non-minimal term generates additional contributions involving second derivatives ofΨ (analogous to those appearing in scalar–tensor theories). For conceptual clarity we retain the leading-order stress-energy derived from the kinetic and potential sectors; a complete treatment will be presented elsewhere. 2.2 Harmonic Stress-Energy Tensor Variation of the minimal sectors with respect togµν yields: 3 Theorem 2.1(Harmonic Stress-Energy Tensor). T(Ψ) µν = β∇µΨ ∇νΨ −1 2βgµν ( ∇αΨ∇αΨ −m2 ΨΨ2) ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "iation of the minimal sectors with respect togµν yields: 3 Theorem 2.1(Harmonic Stress-Energy Tensor). T(Ψ) µν = β∇µΨ ∇νΨ −1 2βgµν ( ∇αΨ∇αΨ −m2 ΨΨ2) . (3) For a spatially homogeneous configurationΨ = Ψ(t) the gradient terms vanish andT(Ψ) µν reduces to a pure cosmological-constant contribution proportional toΨ2gµν. Thus the primordial waveform itself can source an effective dark-energy component without additional fields. 2.3 The UAF Trace Equation Contracting the modified Einstein equations withgµν and employing the identitiesgµνGµν = −R and gµν(∇µ∇ν −gµν□) = −3□ produces the central relation of the framework. Theorem 2.2(UAF Trace Equation). R ( 1 + 2κξΨ2) = −κT + 6κξ□Ψ2, (4) where T = gµνTµν is the trace of the matter stress-energy tensor. Proof."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "ramework. Theorem 2.2(UAF Trace Equation). R ( 1 + 2κξΨ2) = −κT + 6κξ□Ψ2, (4) where T = gµνTµν is the trace of the matter stress-energy tensor. Proof. Starting from the Einstein equation modified by the non-minimal coupling, Gµν + κT(Ψ,eff) µν = κTmatter µν , (5) we contract withgµν. The left-hand side yields−R plus the contribution arising fromξRΨ2. After rearrangement one obtains precisely the stated formula. Even in a pure vacuum (T = 0) the curvature remains non-vanishing and is sourced by the wave operator acting onΨ2: R∝ □Ψ2 1 + 2κξΨ2 . (6) Thus the propagation of the primordial waveform actively generates spacetime curvature. 3 Algebraic Cohomological Quantization The macroscopic fieldΨ is coupled to microscopic quantum states by the pure-phase ansatz ψ= ψ0 exp ( iαΨ ) ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "e. 3 Algebraic Cohomological Quantization The macroscopic fieldΨ is coupled to microscopic quantum states by the pure-phase ansatz ψ= ψ0 exp ( iαΨ ) . (7) 3.1 Modified Schrödinger Equation Substitution into the free Schrödinger equation immediately produces: Theorem 3.1(Velocity-Dependent Harmonic Potential). i∂tψ0 = [ − 1 2m∇2 + V −α m(∇Ψ) ·∇− α2 2m(∇Ψ)2 ] ψ0. (8) The cross terms define a geometric connectionA= αdΨ on the principalU(1) bundle of the quantum state. The connection is locally pure gauge, yet globally nontrivial once topology is taken into account. 4 3.2 Topological Quantization We promote the phaseΘ(x) = kµxµ + φ to a compact scalar field with target spaceS1. The associated connection one-form isA= αdΘ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "pological Quantization We promote the phaseΘ(x) = kµxµ + φ to a compact scalar field with target spaceS1. The associated connection one-form isA= αdΘ. On a manifold possessing nontrivial first de Rham cohomology the integral ofAaround a closed loopγ equals 2παw, wherew∈Z is the winding number. Single-valuedness of the quantum wave function then demands α·2πw = 2πn, n,w ∈Z, (9) which quantizes the coupling strengthα in terms of the topological invariants of the underlying spacetime. 4 Transfinite Ordinals and Hyperuniversal D-Geometry 4.1 Transfinite Regularization Ultraviolet momentum integrals diverge at the Planck scale. We regularize them by an ordinal- indexed cutoff hierarchy I= ∑ α<Ω ∫ωα 0 k3 dk= lim α→Ω ω4 α 4 ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "olet momentum integrals diverge at the Planck scale. We regularize them by an ordinal- indexed cutoff hierarchy I= ∑ α<Ω ∫ωα 0 k3 dk= lim α→Ω ω4 α 4 . (10) As the ordinal index ascends, the effective cutoff grows in a controlled fashion, capturing multi-scale contributions while remaining finite at every intermediate stage. 4.2 Dynamic Spectral Dimension We coupleΨ to a fractal metric whose effective Hausdorff dimension flows with energy density: D(E) = 4 −2 ( E MPl )2 exp ( −βν2 Ψ2 ) , (11) where ν = ⟨Ψ⟩is the vacuum expectation value of the primordial waveform. At laboratory and astrophysical energies one recoversD= 4. Near the Planck regime the exponential suppression weakens and the dimension collapses toward two, dynamically eliminating ultraviolet divergences."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "4. Near the Planck regime the exponential suppression weakens and the dimension collapses toward two, dynamically eliminating ultraviolet divergences. 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 2 2.5 3 3.5 4 Energy E/MPl Effective dimensionD Spectral Dimension FlowD(E) D(E) (UAF) Classical D= 4 Topological floorD= 2 Figure 1: Dynamic spectral dimension predicted by Eq.(11). At low energy the geometry is four-dimensional; near the Planck scale it approaches the topological floorD= 2. 5 5 The Holographic Cosmic Stabilizer We formalize the idea that the universe functions as an active error-correcting code. In the language of quantum information, a surface code protects logical information by continuous stabilizer measurements."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "tive error-correcting code. In the language of quantum information, a surface code protects logical information by continuous stabilizer measurements. Here the stabilizers are generated by the primordial waveform itself: SΨ = ∏ x∈M exp ( i ˆOΨ(x) ) . (12) In the gravitational path integral, trajectories that violate the global phase condition ofΨ interfere destructively and are projected out of the physical Hilbert space. 5.1 Two-Dimensional de Sitter Core When a collapsing stellar core approaches Planckian energy density, the flow(11) drives the local effective dimension toward two. In strictly two-dimensional spacetime the Einstein tensor vanishes identically,Gµν ≡0. Propagating gravitational degrees of freedom freeze out and the geometry becomes purely topological."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "the Einstein tensor vanishes identically,Gµν ≡0. Propagating gravitational degrees of freedom freeze out and the geometry becomes purely topological. The would-be singularity is thereby converted into a non-dynamical, unitarity-preserving surface. Theorem 5.1(Holographic Stabilizer Theorem). The holographic principle is realized as an active subroutine of a cosmic error-correcting code. Whenever spacetime threatens to lose unitarity through a classical singularity, the primordial waveformΨ dynamically compresses the local geometry into a two-dimensional topological surface code, freezing dynamical degrees of freedom and neutralizing the singularity by destructive interference of non-causal paths."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "onal topological surface code, freezing dynamical degrees of freedom and neutralizing the singularity by destructive interference of non-causal paths. 6 Quantitative Multi-Messenger Predictions 6.1 Gravitational-Wave Chirp Suppression Linearization of the UAF trace equation modifies the wave equation for metric perturbations. Because a purely two-dimensional geometry supports no propagating tensor modes, the radiated power is suppressed by the available phase-space factor PUAF = PGR ×D(Emerger) −2 2 . (13) Consequently the framework predicts a characteristic “blunting” of the gravitational-wave chirp amplitude precisely at the moment of peak coalescence, when the local energy density is highest."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "acteristic “blunting” of the gravitational-wave chirp amplitude precisely at the moment of peak coalescence, when the local energy density is highest. 6 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 0.6 0.8 1 Frequencyf/fmerger Amplitude modifier Chirp Amplitude Suppression Factor UAF modifier Pure GR Figure 2: Localized suppression of the gravitational-wave strain amplitude near merger frequency, as implemented in the Bilby waveform model of Sec. 7. 6.2 Topological Shapiro Delay for Neutrinos A neutrino emitted from a high-density core must traverse a region of varying spectral dimension. The concomitant change in available phase space induces an effective refractive index, producing an energy-dependent time delay ∆tUAF ≈1 c ∫R r0 [ 1 + η ( E(r) MPl )2 exp ( −βν2 Ψ2 )] dr."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "hase space induces an effective refractive index, producing an energy-dependent time delay ∆tUAF ≈1 c ∫R r0 [ 1 + η ( E(r) MPl )2 exp ( −βν2 Ψ2 )] dr. (14) For a core-collapse supernova the differential delay between TeV and MeV neutrinos is expected to lie in the microsecond range—a signature potentially accessible to IceCube-Gen2 and Hyper- Kamiokande. 7 Robust Validation Framework 7.1 Hierarchical Bayesian Analysis with Bilby Because the predicted amplitude suppression is localized near merger, standard template banks will typically absorb the effect into biased estimates of spin or luminosity distance. We therefore supply a parameterized waveform model that injects the UAF suppression profile directly into existing numerical-relativity approximants."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "We therefore supply a parameterized waveform model that injects the UAF suppression profile directly into existing numerical-relativity approximants. Listing 1: Bilby implementation of UAF chirp suppression 1 import bilby 2 import numpy as np 3 4 def uaf_blunted_waveform ( 5 frequency_array , mass_1 , mass_2 , luminosity_distance , 6 theta_jn , phase , a_1 , a_2 , tilt_1 , tilt_2 , phi_12 , phi_jl , 7 gamma_uaf =0.4 , f_merger =None , width =0.15 , ** kwargs 8 ): 9 \"\"\" 10 Injects a localized topological - dimension - flow suppression 7 11 into a standard GR waveform ( IMRPhenomPv2 by default ). 12 \"\"\" 13 # Generate baseline GR polarizations 14 polarizations = bilby .gw. source ."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "on 7 11 into a standard GR waveform ( IMRPhenomPv2 by default ). 12 \"\"\" 13 # Generate baseline GR polarizations 14 polarizations = bilby .gw. source . lal_binary_black_hole ( 15 frequency_array , mass_1 , mass_2 , luminosity_distance , 16 theta_jn , phase , a_1 , a_2 , tilt_1 , tilt_2 , 17 phi_12 , phi_jl , ** kwargs 18 ) 19 20 # Center the Gaussian suppression at the estimated merger frequency 21 if f_merger is None : 22 f_merger = frequency_array [np. argmax ( 23 np. abs ( polarizations [’plus ’]) 24 )] 25 26 suppression = gamma_uaf * np. exp ( 27 -0.5 * (( frequency_array - f_merger ) / width ) **2 28 ) 29 # Physical floor : amplitude never drops below 50 % 30 modifier = np."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "_uaf * np. exp ( 27 -0.5 * (( frequency_array - f_merger ) / width ) **2 28 ) 29 # Physical floor : amplitude never drops below 50 % 30 modifier = np. clip (1.0 - suppression , 0.5 , 1.0) 31 32 for mode in (’plus ’, ’cross ’): 33 polarizations [ mode ] *= modifier 34 35 return polarizations 7.2 Quantum-Circuit Simulation of the Stabilizer To illustrate the error-correction mechanism we provide a minimal Qiskit circuit that encodes a three-qubit “spacetime” register protected by two stabilizer ancillas. An injected bit-flip error is detected via syndrome measurement and corrected, restoring the original logical state."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "ected by two stabilizer ancillas. An injected bit-flip error is detected via syndrome measurement and corrected, restoring the original logical state. Listing 2: Cosmic stabilizer error-correction simulation 1 from qiskit import QuantumCircuit , QuantumRegister , ClassicalRegister 2 from qiskit_aer import AerSimulator 3 from qiskit import transpile 4 5 # Registers 6 qr_space = QuantumRegister (3 , ’ spacetime ’) 7 qr_psi = QuantumRegister (2 , ’ stabilizer ’) 8 cr_syn = ClassicalRegister (2 , ’ syndrome ’) 9 cr_out = ClassicalRegister (3 , ’ geometry ’) 10 11 qc = QuantumCircuit ( qr_space , qr_psi , cr_syn , cr_out ) 12 13 # Prepare a coherent GHZ - like spacetime state 14 qc.h( qr_space [0]) 15 qc.cx( qr_space [0] , qr_space [1]) 16 qc.cx( qr_space [0] , qr_space [2]) 17 qc."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "pare a coherent GHZ - like spacetime state 14 qc.h( qr_space [0]) 15 qc.cx( qr_space [0] , qr_space [1]) 16 qc.cx( qr_space [0] , qr_space [2]) 17 qc. barrier ( label =’ Coherent ’) 18 19 # Inject a non - causal (bit - flip ) error 20 qc.x( qr_space [1]) 21 qc. barrier ( label =’Error ’) 22 23 # Measure topological parity ( syndrome ) 24 qc.cx( qr_space [0] , qr_psi [0]) 25 qc.cx( qr_space [1] , qr_psi [0]) 26 qc.cx( qr_space [1] , qr_psi [1]) 27 qc.cx( qr_space [2] , qr_psi [1]) 8 28 qc. measure ( qr_psi , cr_syn ) 29 qc. barrier ( label =’ Syndrome ’) 30 31 # Conditional recovery 32 qc.x( qr_space [0]) . c_if ( cr_syn , 1) 33 qc.x( qr_space [1]) . c_if ( cr_syn , 3) 34 qc.x( qr_space [2]) . c_if ( cr_syn , 2) 35 qc. barrier ( label =’ Healed ’) 36 37 # Final measurement 38 qc."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "x( qr_space [1]) . c_if ( cr_syn , 3) 34 qc.x( qr_space [2]) . c_if ( cr_syn , 2) 35 qc. barrier ( label =’ Healed ’) 36 37 # Final measurement 38 qc. measure ( qr_space , cr_out ) 39 40 # Execute 41 sim = AerSimulator () 42 result = sim . run ( transpile (qc , sim ), shots =1024) . result () 43 print ( result . get_counts ()) 8 Conclusion and Outlook By embedding a single primordial harmonic oscillator into both the Einstein–Hilbert action and the Schrödinger equation we have obtained a self-consistent topological framework that simultaneously addresses singularity resolution, ultraviolet finiteness, and unitarity protection."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "tained a self-consistent topological framework that simultaneously addresses singularity resolution, ultraviolet finiteness, and unitarity protection. The dynamical reduction of the spectral dimension to a two-dimensional core supplies a concrete realization of a cosmic surface code, while the multi-messenger signatures—chirp blunting and topological Shapiro delay—offer clear observational targets for the next generation of gravitational-wave and neutrino observatories. Several avenues remain open. A fully rigorous treatment of the non-minimal coupling, includ- ing its effect on the graviton propagator, is required. The ordinal regularization scheme should be connected more tightly to renormalization-group methods."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "s effect on the graviton propagator, is required. The ordinal regularization scheme should be connected more tightly to renormalization-group methods. Finally, systematic parameter estimation with the supplied Bilby model on existing LIGO–Virgo–KAGRA events will quantify the present observational constraints on the UAF coupling strengths. The universe, in this picture, is not merely described by geometry and probability; it is actively error-corrected by the resonance ofΨ(x). A Expanded Toy Models A.1 Anisotropic Oscillator Consider a backgroundΨ(x,y,z ) = Acos(ωx). A three-dimensional isotropic harmonic oscillator coupled via the phase factorexp[iαAcos(ωx)] acquires an anisotropic effective potential."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "= Acos(ωx). A three-dimensional isotropic harmonic oscillator coupled via the phase factorexp[iαAcos(ωx)] acquires an anisotropic effective potential. The resulting level splitting is in principle accessible to high-precision atomic-clock spectroscopy. A.2 Time-Dependent Phase Locking For a traveling-wave configurationΨ(t,x) = Acos(ωt−kx) the modified Schrödinger equation generates macroscopic Rabi-like oscillations at frequencyΩR ∝αA. In laboratory Bose–Einstein condensates or cavity-QED systems this would appear as a universal phase-locking signal independent of local electromagnetic details. Acknowledgments The author thanks the open-source communities behind Bilby, Qiskit, and the broader scientific Python ecosystem. 9 References [1] A. Y."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "cknowledgments The author thanks the open-source communities behind Bilby, Qiskit, and the broader scientific Python ecosystem. 9 References [1] A. Y. Kitaev, “Fault-tolerant quantum computation by anyons,”Annals of Physics303, 2–30 (2003). [2] S. Carlip, “Spontaneous dimensional reduction in short-distance quantum gravity,”AIP Conf. Proc.1196, 72 (2009). [3] B. P. Abbott et al. (LIGO Scientific and Virgo Collaborations), “Observation of gravitational waves from a binary black hole merger,”Phys. Rev. Lett.116, 061102 (2016). [4] M. G. Aartsen et al. (IceCube Collaboration), “Multimessenger observations of a flaring blazar coincident with high-energy neutrino IceCube-170922A,”Science 361, eaat1378 (2018). [5] G."
+ },
+ {
+  "source": "uaf_paper_improved.pdf",
+  "text": "boration), “Multimessenger observations of a flaring blazar coincident with high-energy neutrino IceCube-170922A,”Science 361, eaat1378 (2018). [5] G. Ashton et al., “BILBY: A user-friendly Bayesian inference library for gravitational-wave astronomy,”Astrophys. J. Suppl. Ser.241, 27 (2019). [6] J. D. Bekenstein, “Black holes and entropy,”Phys. Rev. D7, 2333 (1973). [7] G. W. Horndeski, “Second-order scalar-tensor field equations in a four-dimensional space,” Int. J. Theor. Phys.10, 363–384 (1974). [8] G. Amelino-Camelia, “Quantum-spacetime phenomenology,”Living Rev. Relativ.16, 5 (2013). 10"
+ }
+]

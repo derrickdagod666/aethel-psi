@@ -1,0 +1,24 @@
+== 1. Index build ==
+Index already exists at /home/hatch/workspace/user/files/architects-of-reality/cognitive-companion-v2/syntropic.index — use --force to rebuild.
+  [PASS] index builds (ntotal=96, dim=768, build=0.1s)
+       sources in index: ['new-theory-third-revised.pdf', 'uaf_paper_improved.pdf']
+== 2. Retrieval ==
+Loading embedding model...
+FAISS index loaded: 96 chunks, dim 768
+LM Studio not reachable at http://localhost:1234/v1 (HTTPConnectionPool(host='localhost', port=1234): Max retries exceeded with url: /v1/models (Caused by NewConnectionError("HTTPConnection(host='localhost', port=1234): Failed to establish a new connection: [Errno 111] Connection refused"))) — demo mode
+  [PASS] retrieval returns 3 chunks (took 6.03s)
+  [PASS] top L2 distance is a real number (top L2=0.815)
+       top source: new-theory-third-revised.pdf
+       top text (first 200 chars): air F(x) = x2 / (1 + x2) 0 exactly, as required 0 exactly The repair does what was asked of it: F(0) = 0. Its consequence must also be stated plainly. With the rational form the theory predicts no gam
+  [PASS] top chunk mentions gamma or GW250114 
+== 3. Demo response ==
+       mode=demo latency=3.19s words=493 chunks=3
+  [PASS] demo mode when LM Studio is down 
+  [PASS] demo answer cites a source 
+  [PASS] demo answer says it is a demo 
+  [PASS] demo answer is non-empty (2953 chars, 3.19s)
+== 4. Billing disabled ==
+  [PASS] billing is disabled by default 
+  [PASS] checkout returns no URL and no charge (message: Billing is not configured. This is a demo build: no Stripe account, product, or ...)
+== Summary ==
+  10/10 checks passed
