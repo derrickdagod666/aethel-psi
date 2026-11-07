@@ -1,0 +1,13 @@
+VQE headless test — simulator only, STO-3G, analytic (shots=None)
+Ansatz: UCCSD from the HF reference (see vqe_core.py for why).
+H2   bond=0.74 A  qubits= 4  VQE=-1.137167 Ha  exact=-1.137284 Ha  err=+0.000117 Ha  tol=0.005  PASS  (7.5s)
+LiH  bond=1.60 A  qubits= 4  VQE=-7.862121 Ha  exact=-7.862129 Ha  err=+0.000008 Ha  tol=0.005  PASS  (9.4s)
+H2O  bond=0.96 A  qubits= 8  VQE=-74.970792 Ha  exact=-74.970810 Ha  err=+0.000017 Ha  tol=0.010  PASS  (191.6s)
+NH3  bond=1.01 A  qubits= 8  VQE=-55.465369 Ha  exact=-55.465417 Ha  err=+0.000047 Ha  tol=0.010  PASS  (177.0s)
+H2 bond scan (5 points, 40 steps each):
+  r=0.50 A  VQE=-1.055153  exact=-1.055160  err=+0.000007  PASS
+  r=0.74 A  VQE=-1.137167  exact=-1.137284  err=+0.000117  PASS
+  r=1.00 A  VQE=-1.100848  exact=-1.101150  err=+0.000302  PASS
+  r=1.40 A  VQE=-1.014939  exact=-1.015468  err=+0.000529  PASS
+  r=2.00 A  VQE=-0.946908  exact=-0.948641  err=+0.001733  PASS
+RESULT: PASS
