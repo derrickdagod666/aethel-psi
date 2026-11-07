@@ -1,0 +1,37 @@
+# Pinned versions for the Unified QCE v2.
+# Base pins match syntropic-swarm-v2 (proven stack); fastapi/uvicorn are
+# added for the optional billing stub (backend_stub.py) — the companion v2
+# shipped the stub without a requirements.txt at all, which is fixed here.
+# Install: python -m venv venv && venv/bin/pip install -r requirements.txt
+# NOTE: the torch download behind sentence-transformers is ~540 MB and the
+# network here is flaky — use --resume-retries 10 if it stalls.
+gradio==5.50.0
+gradio-client==1.14.0  # paired with gradio 5.50.0; 1.4.2 crashed on the
+# Chatbot component's "additionalProperties": true schema (get_api_info
+# TypeError), which made launch() fail its localhost check.
+faiss-cpu==1.12.0
+sentence-transformers==5.0.0
+openai==1.107.0
+qiskit==2.2.1
+qiskit-aer==0.17.1
+qiskit-algorithms==0.4.0
+numpy==2.3.1
+pypdf==6.0.0
+requests==2.32.4
+plotly==6.1.0
+scikit-learn==1.7.0
+sympy==1.13.3
+brainflow==5.16.0
+# setuptools pinned <81: brainflow 5.16.0 imports pkg_resources, which
+# setuptools removed in 81+ (pip installs setuptools 84 by default).
+# With setuptools 84, `import brainflow` fails and the EEG falls back to
+# numpy-simulated bands. Pin 80.9.0 so the BrainFlow synthetic board works.
+setuptools==80.9.0
+fastapi==0.115.6
+uvicorn==0.34.0
+# NOTE: qiskit-ibm-runtime is intentionally NOT in this file. IBM mode
+# requires saved IBM Quantum credentials AND AOR_ENABLE_IBM=1; install it
+# separately (pip install qiskit-ibm-runtime) only if you want that mode.
+# torch is pulled in by sentence-transformers (large download, ~2 GB).
+# Observed in the tested venv: torch==2.15.0 (CUDA build; CPU-only is
+# fine on a machine with no GPU, but the CUDA build is what was tested).
