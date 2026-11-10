@@ -1,4 +1,4 @@
-# validation-suites — falsifiable suites v2–v5
+# validation-suites — falsifiable suites v2–v5, v7
 
 Standalone scripts. Every check is pre-registered and able to FAIL;
 the scripts exit 1 when any check FAILs (that is correct behaviour,
@@ -10,6 +10,7 @@ not a bug).
 | v3 (`aethel_psi_suite_v3.py`, full) | PASS=40 FAIL=5 OPEN=10 | A2 fixed with a binomial coverage test. γ(M) flat 0.00903; A4 unobservable. |
 | v4 (`aethel_psi_suite_v4.py`, full) | PASS=6 FAIL=11 OPEN=8 | Tests the new LaTeX claims: β_A/β_ε derivations FAIL, phantom 0.476 FAILs vs DESI, Fisher 1.001 FAILs (1.225), Λ ≡ 0 FAILs, Gilkey a4 PASS (−1/6). |
 | v5 (`aethel_psi_suite_v5.py`, full) | **PASS=25 FAIL=18 OPEN=6 INFO=8** | The five repairs: only ξ = −1/6 closes (under stated D_Ψ). β_A fitted, phantom FAILED, Λ dropped, A4 narrowed to failed-SN cutoff. |
+| v7 (`aethel_psi_suite_v7.py`, full) | **PASS=15 FAIL=8 OPEN=5 INFO=5** | Drive documents: the Jan 2026 QFI/"Beyond Supremacy" manuscript vs the Aug 2025 "Dissection" critique, against the standing record. Dissection sustained (8 PASS / 1 OPEN); manuscript's borrowed math PASSes, its own formalism FAILs (L_int undefined, EOM drops m_Ψ², G_eff isolation false, claimed 100% validation not in evidence); Gate 3 relation INDEPENDENT (OPEN). Report: `V7_TESTS.md`; sources: `v7_sources/`. |
 
 Also here: `test_core.py` (core math), `test_bilby_real.py`
 (Bilby waveform, both the verbatim and fixed width versions),
@@ -20,6 +21,7 @@ Also here: `test_core.py` (core math), `test_bilby_real.py`
 ```bash
 pip install -r ../requirements.txt
 python aethel_psi_suite_v5.py        # full run; exit 1 is expected
+python aethel_psi_suite_v7.py        # Drive-document round; exit 1 is expected
 python test_core.py
 python test_bilby_real.py
 python qiskit-stabilizer/test_qiskit.py   # from repo root; see its README
