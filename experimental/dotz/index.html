@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Gemini Advanced Chat</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.7.0",
+          "marked": "https://esm.sh/marked@^15.0.7"
+        }
+      }
+    </script>
+    <script type="module" src="index.tsx"></script>
+  </head>
+  <body>
+    <main class="chat-container">
+      <header>
+        <h1>Gemini Advanced Chat</h1>
+        <button id="tts-toggle" class="icon-button" type="button" aria-label="Enable text-to-speech" aria-pressed="false">
+          <svg class="tts-off-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.5 12C16.5 10.23 15.48 8.71 14 7.97V16.02C15.48 15.29 16.5 13.77 16.5 12ZM12 4L7 9H3V15H7L12 20V4ZM14 3.23V5.29C16.89 6.15 19 8.83 19 12C19 15.17 16.89 17.84 14 18.7V20.77C18.01 19.86 21 16.28 21 12C21 7.72 18.01 4.14 14 3.23Z"></path>
+          </svg>
+          <svg class="tts-on-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.63 3.63C3.24 4.02 3.24 4.65 3.63 5.04L7.59 9H3V15H7L12 20V13.41L16.46 17.87C15.96 18.14 15.42 18.35 14.83 18.48L14.83 20.48C15.7 20.31 16.5 19.96 17.22 19.46L19.96 22.2C20.35 22.59 20.98 22.59 21.37 22.2C21.76 21.81 21.76 21.18 21.37 20.79L5.04 4.36C4.65 3.97 4.02 3.97 3.63 3.63ZM12 4L12 6.59L9.41 4L12 4ZM19 12C19 13.82 18.29 15.45 17.21 16.63L18.78 18.2C20.07 16.68 21 14.48 21 12C21 7.72 18.01 4.14 14 3.23L14 5.29C16.89 6.15 19 8.83 19 12Z"></path>
+          </svg>
+        </button>
+      </header>
+      <div id="chat-history">
+        <div class="message model-message">
+          <div class="content">
+            <p>Hello! How can I help you today? You can ask me questions, upload an image, ask for a recipe, or even ask me to draw something for you!</p>
+          </div>
+        </div>
+      </div>
+      <form id="chat-form">
+        <div id="image-preview-container">
+          <img id="image-preview" src="" alt="Image preview" />
+          <button id="remove-image" type="button" aria-label="Remove image">&times;</button>
+        </div>
+        <div id="tools-container">
+          <label for="use-google-search">
+            <input type="checkbox" id="use-google-search" name="use-google-search">
+            <span>Use Google Search</span>
+          </label>
+        </div>
+        <div class="input-row">
+          <label for="image-upload" class="icon-button" aria-label="Upload image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9999 13.0457V20C21.9999 21.1046 21.1045 22 19.9999 22H4C2.89543 22 2 21.1046 2 20V4C2 2.89543 2.89543 2 4 2H10.9999V4H4V20H19.9999V13.0457H21.9999ZM12.9999 2.45432L14.4141 3.86853L9.46436 8.81827L7.9999 10.2827L9.41411 11.697L14.3639 6.74721L15.7781 8.16142L12.9999 10.9392V16H10.9999V8.58586L12.9999 6.58586V2.45432ZM19.9999 2L14.9999 7.00005L12.9999 5.00005L17.9999 0L19.9999 2ZM18.5354 4.87873L17.1212 3.46452L19.2425 1.3432L20.6567 2.75741L18.5354 4.87873Z"/></svg>
+          </label>
+          <input type="file" id="image-upload" accept="image/*" hidden />
+          <textarea
+            id="prompt-input"
+            placeholder="Type your message or upload an image..."
+            rows="1"
+            aria-label="Chat prompt"
+          ></textarea>
+          <button id="send-button" type="submit" aria-label="Send message">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3.47826 2.40501L22.5 12.0001L3.47826 21.5951L3.47641 14.0001L15.5 12.0001L3.47641 10.0001L3.47826 2.40501Z"></path></svg>
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
