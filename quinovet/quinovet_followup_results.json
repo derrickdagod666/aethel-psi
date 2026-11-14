@@ -1,0 +1,77 @@
+{
+  "PT4b_crossover": {
+    "0.01": {
+      "1": {
+        "A_total_failure": 0.0056,
+        "B_total_failure": 0.00455,
+        "B_advantage": 0.0010499999999999997
+      },
+      "2": {
+        "A_total_failure": 0.0063,
+        "B_total_failure": 0.00495,
+        "B_advantage": 0.0013499999999999996
+      },
+      "3": {
+        "A_total_failure": 0.00475,
+        "B_total_failure": 0.00405,
+        "B_advantage": 0.0007000000000000001
+      },
+      "5": {
+        "A_total_failure": 0.00565,
+        "B_total_failure": 0.0046,
+        "B_advantage": 0.0010499999999999997
+      },
+      "10": {
+        "A_total_failure": 0.00415,
+        "B_total_failure": 0.0046,
+        "B_advantage": -0.0004499999999999999
+      },
+      "20": {
+        "A_total_failure": 0.0053,
+        "B_total_failure": 0.0052,
+        "B_advantage": 0.00010000000000000026
+      }
+    },
+    "0.02": {
+      "1": {
+        "A_total_failure": 0.02055,
+        "B_total_failure": 0.01515,
+        "B_advantage": 0.0053999999999999986
+      },
+      "2": {
+        "A_total_failure": 0.0207,
+        "B_total_failure": 0.01715,
+        "B_advantage": 0.003550000000000001
+      },
+      "3": {
+        "A_total_failure": 0.01995,
+        "B_total_failure": 0.0155,
+        "B_advantage": 0.004449999999999999
+      },
+      "5": {
+        "A_total_failure": 0.0178,
+        "B_total_failure": 0.0168,
+        "B_advantage": 0.0010000000000000009
+      },
+      "10": {
+        "A_total_failure": 0.01955,
+        "B_total_failure": 0.01755,
+        "B_advantage": 0.0020000000000000018
+      },
+      "20": {
+        "A_total_failure": 0.0196,
+        "B_total_failure": 0.0183,
+        "B_advantage": 0.001299999999999999
+      }
+    },
+    "pass": false
+  },
+  "PT8b_statevector_powered": {
+    "statevector_trials": 6000,
+    "statevector_failures": 12,
+    "statevector_failure_rate": 0.002,
+    "frame_failure_rate": 0.0021,
+    "combined_sigma": 0.000661397132339313,
+    "pass": true
+  }
+}

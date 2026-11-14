@@ -1,0 +1,198 @@
+{
+  "seed": 20261113,
+  "trials_per_point": 20000,
+  "p_meas_equals_p": true,
+  "results": [
+    {
+      "p": 0.001,
+      "trials": 20000,
+      "decoders": {
+        "A_single": {
+          "success": 19998,
+          "erasure": 2,
+          "residual": 0,
+          "logical": 0,
+          "total_failures": 2,
+          "total_failure_rate": 0.0001,
+          "sigma": 7.070714249635605e-05,
+          "logical_rate_all_trials": 0.0
+        },
+        "B_favourable": {
+          "success": 19998,
+          "erasure": 0,
+          "residual": 0,
+          "logical": 2,
+          "total_failures": 2,
+          "total_failure_rate": 0.0001,
+          "sigma": 7.070714249635605e-05,
+          "logical_rate_all_trials": 0.0001
+        }
+      },
+      "mcnemar": {
+        "A_fail_B_ok": 0,
+        "B_fail_A_ok": 0,
+        "z": 0.0
+      }
+    },
+    {
+      "p": 0.002,
+      "trials": 20000,
+      "decoders": {
+        "A_single": {
+          "success": 19995,
+          "erasure": 2,
+          "residual": 2,
+          "logical": 1,
+          "total_failures": 5,
+          "total_failure_rate": 0.00025,
+          "sigma": 0.00011178942257655686,
+          "logical_rate_all_trials": 5e-05
+        },
+        "B_favourable": {
+          "success": 19996,
+          "erasure": 0,
+          "residual": 3,
+          "logical": 1,
+          "total_failures": 4,
+          "total_failure_rate": 0.0002,
+          "sigma": 9.998999949994999e-05,
+          "logical_rate_all_trials": 5e-05
+        }
+      },
+      "mcnemar": {
+        "A_fail_B_ok": 1,
+        "B_fail_A_ok": 0,
+        "z": 1.0
+      }
+    },
+    {
+      "p": 0.005,
+      "trials": 20000,
+      "decoders": {
+        "A_single": {
+          "success": 19967,
+          "erasure": 16,
+          "residual": 12,
+          "logical": 5,
+          "total_failures": 33,
+          "total_failure_rate": 0.00165,
+          "sigma": 0.00028699107128968315,
+          "logical_rate_all_trials": 0.00025
+        },
+        "B_favourable": {
+          "success": 19976,
+          "erasure": 0,
+          "residual": 12,
+          "logical": 12,
+          "total_failures": 24,
+          "total_failure_rate": 0.0012,
+          "sigma": 0.0002448019607764611,
+          "logical_rate_all_trials": 0.0006
+        }
+      },
+      "mcnemar": {
+        "A_fail_B_ok": 9,
+        "B_fail_A_ok": 0,
+        "z": 3.0
+      }
+    },
+    {
+      "p": 0.01,
+      "trials": 20000,
+      "decoders": {
+        "A_single": {
+          "success": 19888,
+          "erasure": 53,
+          "residual": 46,
+          "logical": 13,
+          "total_failures": 112,
+          "total_failure_rate": 0.0056,
+          "sigma": 0.0005276665613813329,
+          "logical_rate_all_trials": 0.00065
+        },
+        "B_favourable": {
+          "success": 19918,
+          "erasure": 0,
+          "residual": 48,
+          "logical": 34,
+          "total_failures": 82,
+          "total_failure_rate": 0.0041,
+          "sigma": 0.0004518401265934667,
+          "logical_rate_all_trials": 0.0017
+        }
+      },
+      "mcnemar": {
+        "A_fail_B_ok": 30,
+        "B_fail_A_ok": 0,
+        "z": 5.477225575051661
+      }
+    },
+    {
+      "p": 0.02,
+      "trials": 20000,
+      "decoders": {
+        "A_single": {
+          "success": 19572,
+          "erasure": 201,
+          "residual": 180,
+          "logical": 47,
+          "total_failures": 428,
+          "total_failure_rate": 0.0214,
+          "sigma": 0.001023280020326792,
+          "logical_rate_all_trials": 0.00235
+        },
+        "B_favourable": {
+          "success": 19684,
+          "erasure": 0,
+          "residual": 200,
+          "logical": 116,
+          "total_failures": 316,
+          "total_failure_rate": 0.0158,
+          "sigma": 0.0008817698112319338,
+          "logical_rate_all_trials": 0.0058
+        }
+      },
+      "mcnemar": {
+        "A_fail_B_ok": 112,
+        "B_fail_A_ok": 0,
+        "z": 10.583005244258361
+      }
+    },
+    {
+      "p": 0.05,
+      "trials": 20000,
+      "decoders": {
+        "A_single": {
+          "success": 17715,
+          "erasure": 1212,
+          "residual": 827,
+          "logical": 246,
+          "total_failures": 2285,
+          "total_failure_rate": 0.11425,
+          "sigma": 0.002249410339400084,
+          "logical_rate_all_trials": 0.0123
+        },
+        "B_favourable": {
+          "success": 18287,
+          "erasure": 0,
+          "residual": 1105,
+          "logical": 608,
+          "total_failures": 1713,
+          "total_failure_rate": 0.08565,
+          "sigma": 0.0019788137545004077,
+          "logical_rate_all_trials": 0.0304
+        }
+      },
+      "mcnemar": {
+        "A_fail_B_ok": 572,
+        "B_fail_A_ok": 0,
+        "z": 23.916521486202797
+      }
+    }
+  ],
+  "scoring": {
+    "P1_sanity": true,
+    "P2_claim": true,
+    "verdict": "WIN"
+  }
+}

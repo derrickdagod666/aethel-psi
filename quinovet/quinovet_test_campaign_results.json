@@ -1,0 +1,768 @@
+{
+  "PT1_anatomy": {
+    "entropy_block_of_0L_bits": 6.406853007629834e-16,
+    "entropy_block_of_plusL_bits": 1.0000000000000002,
+    "x_syndrome_block_locality": true,
+    "pass": true
+  },
+  "PT2_berry_invariance": {
+    "gamma_physical": 2.2214643074997467,
+    "gamma_encoded": 2.2214643074997524,
+    "abs_difference": 5.773159728050814e-15,
+    "pass": true
+  },
+  "PT3_landscape": {
+    "weight_2": {
+      "total": 324,
+      "favourable_correct": 180,
+      "favourable_correct_rate": 0.5555555555555556,
+      "single_correct": 45,
+      "single_correct_rate": 0.1388888888888889,
+      "in_family": 180,
+      "in_family_correct": 180,
+      "in_family_rate": 1.0,
+      "pure_z_same_block": {
+        "total": 9,
+        "correct": 9,
+        "rate": 1.0
+      },
+      "pure_z_cross_block": {
+        "total": 27,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "weight_3": {
+      "total": 2268,
+      "favourable_correct": 804,
+      "favourable_correct_rate": 0.3544973544973545,
+      "single_correct": 183,
+      "single_correct_rate": 0.08068783068783068,
+      "in_family": 480,
+      "in_family_correct": 480,
+      "in_family_rate": 1.0
+    },
+    "pass": true
+  },
+  "PT4_z_bias_eta10_p0.005": {
+    "A": {
+      "success": 19977,
+      "erasure": 3,
+      "residual": 9,
+      "logical": 11,
+      "total_failure_rate": 0.00115,
+      "logical_share_of_failures": 0.4782608695652174
+    },
+    "B": {
+      "success": 19975,
+      "erasure": 0,
+      "residual": 14,
+      "logical": 11,
+      "total_failure_rate": 0.00125,
+      "logical_share_of_failures": 0.44
+    }
+  },
+  "PT4_z_bias_eta10_p0.01": {
+    "A": {
+      "success": 19913,
+      "erasure": 18,
+      "residual": 36,
+      "logical": 33,
+      "total_failure_rate": 0.00435,
+      "logical_share_of_failures": 0.3793103448275862
+    },
+    "B": {
+      "success": 19908,
+      "erasure": 0,
+      "residual": 54,
+      "logical": 38,
+      "total_failure_rate": 0.0046,
+      "logical_share_of_failures": 0.41304347826086957
+    }
+  },
+  "PT4_z_bias_eta10_p0.02": {
+    "A": {
+      "success": 19640,
+      "erasure": 68,
+      "residual": 143,
+      "logical": 149,
+      "total_failure_rate": 0.018,
+      "logical_share_of_failures": 0.41388888888888886
+    },
+    "B": {
+      "success": 19636,
+      "erasure": 0,
+      "residual": 189,
+      "logical": 175,
+      "total_failure_rate": 0.0182,
+      "logical_share_of_failures": 0.4807692307692308
+    }
+  },
+  "PT4_z_bias_eta10_p0.05": {
+    "A": {
+      "success": 17861,
+      "erasure": 533,
+      "residual": 899,
+      "logical": 707,
+      "total_failure_rate": 0.10695,
+      "logical_share_of_failures": 0.33052828424497427
+    },
+    "B": {
+      "success": 17990,
+      "erasure": 0,
+      "residual": 1179,
+      "logical": 831,
+      "total_failure_rate": 0.1005,
+      "logical_share_of_failures": 0.4134328358208955
+    }
+  },
+  "PT4_x_bias_eta10_p0.005": {
+    "A": {
+      "success": 19967,
+      "erasure": 10,
+      "residual": 17,
+      "logical": 6,
+      "total_failure_rate": 0.00165,
+      "logical_share_of_failures": 0.18181818181818182
+    },
+    "B": {
+      "success": 19979,
+      "erasure": 0,
+      "residual": 14,
+      "logical": 7,
+      "total_failure_rate": 0.00105,
+      "logical_share_of_failures": 0.3333333333333333
+    }
+  },
+  "PT4_x_bias_eta10_p0.01": {
+    "A": {
+      "success": 19892,
+      "erasure": 50,
+      "residual": 39,
+      "logical": 19,
+      "total_failure_rate": 0.0054,
+      "logical_share_of_failures": 0.17592592592592593
+    },
+    "B": {
+      "success": 19928,
+      "erasure": 0,
+      "residual": 50,
+      "logical": 22,
+      "total_failure_rate": 0.0036,
+      "logical_share_of_failures": 0.3055555555555556
+    }
+  },
+  "PT4_x_bias_eta10_p0.02": {
+    "A": {
+      "success": 19542,
+      "erasure": 235,
+      "residual": 177,
+      "logical": 46,
+      "total_failure_rate": 0.0229,
+      "logical_share_of_failures": 0.10043668122270742
+    },
+    "B": {
+      "success": 19751,
+      "erasure": 0,
+      "residual": 191,
+      "logical": 58,
+      "total_failure_rate": 0.01245,
+      "logical_share_of_failures": 0.23293172690763053
+    }
+  },
+  "PT4_x_bias_eta10_p0.05": {
+    "A": {
+      "success": 17478,
+      "erasure": 1342,
+      "residual": 916,
+      "logical": 264,
+      "total_failure_rate": 0.1261,
+      "logical_share_of_failures": 0.10467882632831087
+    },
+    "B": {
+      "success": 18478,
+      "erasure": 0,
+      "residual": 1127,
+      "logical": 395,
+      "total_failure_rate": 0.0761,
+      "logical_share_of_failures": 0.259526938239159
+    }
+  },
+  "PT4_bias": {
+    "z_bias_eta10": {
+      "0.005": {
+        "A": {
+          "success": 19977,
+          "erasure": 3,
+          "residual": 9,
+          "logical": 11,
+          "total_failure_rate": 0.00115,
+          "logical_share_of_failures": 0.4782608695652174
+        },
+        "B": {
+          "success": 19975,
+          "erasure": 0,
+          "residual": 14,
+          "logical": 11,
+          "total_failure_rate": 0.00125,
+          "logical_share_of_failures": 0.44
+        }
+      },
+      "0.01": {
+        "A": {
+          "success": 19913,
+          "erasure": 18,
+          "residual": 36,
+          "logical": 33,
+          "total_failure_rate": 0.00435,
+          "logical_share_of_failures": 0.3793103448275862
+        },
+        "B": {
+          "success": 19908,
+          "erasure": 0,
+          "residual": 54,
+          "logical": 38,
+          "total_failure_rate": 0.0046,
+          "logical_share_of_failures": 0.41304347826086957
+        }
+      },
+      "0.02": {
+        "A": {
+          "success": 19640,
+          "erasure": 68,
+          "residual": 143,
+          "logical": 149,
+          "total_failure_rate": 0.018,
+          "logical_share_of_failures": 0.41388888888888886
+        },
+        "B": {
+          "success": 19636,
+          "erasure": 0,
+          "residual": 189,
+          "logical": 175,
+          "total_failure_rate": 0.0182,
+          "logical_share_of_failures": 0.4807692307692308
+        }
+      },
+      "0.05": {
+        "A": {
+          "success": 17861,
+          "erasure": 533,
+          "residual": 899,
+          "logical": 707,
+          "total_failure_rate": 0.10695,
+          "logical_share_of_failures": 0.33052828424497427
+        },
+        "B": {
+          "success": 17990,
+          "erasure": 0,
+          "residual": 1179,
+          "logical": 831,
+          "total_failure_rate": 0.1005,
+          "logical_share_of_failures": 0.4134328358208955
+        }
+      }
+    },
+    "x_bias_eta10": {
+      "0.005": {
+        "A": {
+          "success": 19967,
+          "erasure": 10,
+          "residual": 17,
+          "logical": 6,
+          "total_failure_rate": 0.00165,
+          "logical_share_of_failures": 0.18181818181818182
+        },
+        "B": {
+          "success": 19979,
+          "erasure": 0,
+          "residual": 14,
+          "logical": 7,
+          "total_failure_rate": 0.00105,
+          "logical_share_of_failures": 0.3333333333333333
+        }
+      },
+      "0.01": {
+        "A": {
+          "success": 19892,
+          "erasure": 50,
+          "residual": 39,
+          "logical": 19,
+          "total_failure_rate": 0.0054,
+          "logical_share_of_failures": 0.17592592592592593
+        },
+        "B": {
+          "success": 19928,
+          "erasure": 0,
+          "residual": 50,
+          "logical": 22,
+          "total_failure_rate": 0.0036,
+          "logical_share_of_failures": 0.3055555555555556
+        }
+      },
+      "0.02": {
+        "A": {
+          "success": 19542,
+          "erasure": 235,
+          "residual": 177,
+          "logical": 46,
+          "total_failure_rate": 0.0229,
+          "logical_share_of_failures": 0.10043668122270742
+        },
+        "B": {
+          "success": 19751,
+          "erasure": 0,
+          "residual": 191,
+          "logical": 58,
+          "total_failure_rate": 0.01245,
+          "logical_share_of_failures": 0.23293172690763053
+        }
+      },
+      "0.05": {
+        "A": {
+          "success": 17478,
+          "erasure": 1342,
+          "residual": 916,
+          "logical": 264,
+          "total_failure_rate": 0.1261,
+          "logical_share_of_failures": 0.10467882632831087
+        },
+        "B": {
+          "success": 18478,
+          "erasure": 0,
+          "residual": 1127,
+          "logical": 395,
+          "total_failure_rate": 0.0761,
+          "logical_share_of_failures": 0.259526938239159
+        }
+      }
+    },
+    "pass": false,
+    "logical_share_B_p002": {
+      "z_bias": 0.4807692307692308,
+      "x_bias": 0.23293172690763053
+    }
+  },
+  "PT5_burst_0.01": {
+    "A": {
+      "success": 19891,
+      "erasure": 46,
+      "residual": 2,
+      "logical": 61,
+      "total_failure_rate": 0.00545,
+      "logical_share_of_failures": 0.5596330275229358
+    },
+    "B": {
+      "success": 19920,
+      "erasure": 0,
+      "residual": 1,
+      "logical": 79,
+      "total_failure_rate": 0.004,
+      "logical_share_of_failures": 0.9875
+    }
+  },
+  "PT5_burst_0.03": {
+    "A": {
+      "success": 19650,
+      "erasure": 133,
+      "residual": 2,
+      "logical": 215,
+      "total_failure_rate": 0.0175,
+      "logical_share_of_failures": 0.6142857142857143
+    },
+    "B": {
+      "success": 19732,
+      "erasure": 0,
+      "residual": 1,
+      "logical": 267,
+      "total_failure_rate": 0.0134,
+      "logical_share_of_failures": 0.996268656716418
+    }
+  },
+  "PT5_hot_0.002": {
+    "A": {
+      "success": 19992,
+      "erasure": 6,
+      "residual": 0,
+      "logical": 2,
+      "total_failure_rate": 0.0004,
+      "logical_share_of_failures": 0.25
+    },
+    "B": {
+      "success": 19995,
+      "erasure": 0,
+      "residual": 1,
+      "logical": 4,
+      "total_failure_rate": 0.00025,
+      "logical_share_of_failures": 0.8
+    }
+  },
+  "PT5_hot_0.005": {
+    "A": {
+      "success": 19937,
+      "erasure": 41,
+      "residual": 8,
+      "logical": 14,
+      "total_failure_rate": 0.00315,
+      "logical_share_of_failures": 0.2222222222222222
+    },
+    "B": {
+      "success": 19967,
+      "erasure": 0,
+      "residual": 7,
+      "logical": 26,
+      "total_failure_rate": 0.00165,
+      "logical_share_of_failures": 0.7878787878787878
+    }
+  },
+  "PT5_correlated": {
+    "burst_0.01": {
+      "A": {
+        "success": 19891,
+        "erasure": 46,
+        "residual": 2,
+        "logical": 61,
+        "total_failure_rate": 0.00545,
+        "logical_share_of_failures": 0.5596330275229358
+      },
+      "B": {
+        "success": 19920,
+        "erasure": 0,
+        "residual": 1,
+        "logical": 79,
+        "total_failure_rate": 0.004,
+        "logical_share_of_failures": 0.9875
+      }
+    },
+    "burst_0.03": {
+      "A": {
+        "success": 19650,
+        "erasure": 133,
+        "residual": 2,
+        "logical": 215,
+        "total_failure_rate": 0.0175,
+        "logical_share_of_failures": 0.6142857142857143
+      },
+      "B": {
+        "success": 19732,
+        "erasure": 0,
+        "residual": 1,
+        "logical": 267,
+        "total_failure_rate": 0.0134,
+        "logical_share_of_failures": 0.996268656716418
+      }
+    },
+    "hot_0.002": {
+      "A": {
+        "success": 19992,
+        "erasure": 6,
+        "residual": 0,
+        "logical": 2,
+        "total_failure_rate": 0.0004,
+        "logical_share_of_failures": 0.25
+      },
+      "B": {
+        "success": 19995,
+        "erasure": 0,
+        "residual": 1,
+        "logical": 4,
+        "total_failure_rate": 0.00025,
+        "logical_share_of_failures": 0.8
+      }
+    },
+    "hot_0.005": {
+      "A": {
+        "success": 19937,
+        "erasure": 41,
+        "residual": 8,
+        "logical": 14,
+        "total_failure_rate": 0.00315,
+        "logical_share_of_failures": 0.2222222222222222
+      },
+      "B": {
+        "success": 19967,
+        "erasure": 0,
+        "residual": 7,
+        "logical": 26,
+        "total_failure_rate": 0.00165,
+        "logical_share_of_failures": 0.7878787878787878
+      }
+    },
+    "pass": true
+  },
+  "PT6_r1_r0.01": {
+    "B": {
+      "success": 18440,
+      "erasure": 0,
+      "residual": 1529,
+      "logical": 31,
+      "total_failure_rate": 0.078,
+      "logical_share_of_failures": 0.01987179487179487
+    }
+  },
+  "PT6_r1_r0.05": {
+    "B": {
+      "success": 13213,
+      "erasure": 0,
+      "residual": 6763,
+      "logical": 24,
+      "total_failure_rate": 0.33935,
+      "logical_share_of_failures": 0.0035361720937085606
+    }
+  },
+  "PT6_r1_r0.1": {
+    "B": {
+      "success": 8488,
+      "erasure": 0,
+      "residual": 11496,
+      "logical": 16,
+      "total_failure_rate": 0.5756,
+      "logical_share_of_failures": 0.001389854065323141
+    }
+  },
+  "PT6_r1_r0.2": {
+    "B": {
+      "success": 3379,
+      "erasure": 0,
+      "residual": 16615,
+      "logical": 6,
+      "total_failure_rate": 0.83105,
+      "logical_share_of_failures": 0.00036098911016184344
+    }
+  },
+  "PT6_r1_r0.3": {
+    "B": {
+      "success": 1152,
+      "erasure": 0,
+      "residual": 18848,
+      "logical": 0,
+      "total_failure_rate": 0.9424,
+      "logical_share_of_failures": 0.0
+    }
+  },
+  "PT6_r3_r0.01": {
+    "B": {
+      "success": 19913,
+      "erasure": 0,
+      "residual": 52,
+      "logical": 35,
+      "total_failure_rate": 0.00435,
+      "logical_share_of_failures": 0.40229885057471265
+    }
+  },
+  "PT6_r3_r0.05": {
+    "B": {
+      "success": 18833,
+      "erasure": 0,
+      "residual": 1131,
+      "logical": 36,
+      "total_failure_rate": 0.05835,
+      "logical_share_of_failures": 0.030848329048843187
+    }
+  },
+  "PT6_r3_r0.1": {
+    "B": {
+      "success": 16087,
+      "erasure": 0,
+      "residual": 3893,
+      "logical": 20,
+      "total_failure_rate": 0.19565,
+      "logical_share_of_failures": 0.005111167901865576
+    }
+  },
+  "PT6_r3_r0.2": {
+    "B": {
+      "success": 8158,
+      "erasure": 0,
+      "residual": 11828,
+      "logical": 14,
+      "total_failure_rate": 0.5921,
+      "logical_share_of_failures": 0.0011822327309576085
+    }
+  },
+  "PT6_r3_r0.3": {
+    "B": {
+      "success": 2851,
+      "erasure": 0,
+      "residual": 17144,
+      "logical": 5,
+      "total_failure_rate": 0.85745,
+      "logical_share_of_failures": 0.0002915621902151729
+    }
+  },
+  "PT6_r5_r0.01": {
+    "B": {
+      "success": 19967,
+      "erasure": 0,
+      "residual": 2,
+      "logical": 31,
+      "total_failure_rate": 0.00165,
+      "logical_share_of_failures": 0.9393939393939394
+    }
+  },
+  "PT6_r5_r0.05": {
+    "B": {
+      "success": 19794,
+      "erasure": 0,
+      "residual": 178,
+      "logical": 28,
+      "total_failure_rate": 0.0103,
+      "logical_share_of_failures": 0.13592233009708737
+    }
+  },
+  "PT6_r5_r0.1": {
+    "B": {
+      "success": 18628,
+      "erasure": 0,
+      "residual": 1348,
+      "logical": 24,
+      "total_failure_rate": 0.0686,
+      "logical_share_of_failures": 0.01749271137026239
+    }
+  },
+  "PT6_r5_r0.2": {
+    "B": {
+      "success": 12379,
+      "erasure": 0,
+      "residual": 7598,
+      "logical": 23,
+      "total_failure_rate": 0.38105,
+      "logical_share_of_failures": 0.003017976643485107
+    }
+  },
+  "PT6_r5_r0.3": {
+    "B": {
+      "success": 4796,
+      "erasure": 0,
+      "residual": 15197,
+      "logical": 7,
+      "total_failure_rate": 0.7602,
+      "logical_share_of_failures": 0.00046040515653775324
+    }
+  },
+  "PT6_readout": {
+    "rounds_1": {
+      "0.01": 0.078,
+      "0.05": 0.33935,
+      "0.1": 0.5756,
+      "0.2": 0.83105,
+      "0.3": 0.9424
+    },
+    "rounds_3": {
+      "0.01": 0.00435,
+      "0.05": 0.05835,
+      "0.1": 0.19565,
+      "0.2": 0.5921,
+      "0.3": 0.85745
+    },
+    "rounds_5": {
+      "0.01": 0.00165,
+      "0.05": 0.0103,
+      "0.1": 0.0686,
+      "0.2": 0.38105,
+      "0.3": 0.7602
+    },
+    "pass": true
+  },
+  "PT7_twirl_random_axis_t0.20": {
+    "B": {
+      "success": 19883,
+      "erasure": 0,
+      "residual": 0,
+      "logical": 117,
+      "total_failure_rate": 0.00585,
+      "logical_share_of_failures": 1.0
+    }
+  },
+  "PT7_twirl_random_axis_t0.35": {
+    "B": {
+      "success": 19101,
+      "erasure": 0,
+      "residual": 0,
+      "logical": 899,
+      "total_failure_rate": 0.04495,
+      "logical_share_of_failures": 1.0
+    }
+  },
+  "PT7_twirl_z_only_t0.20": {
+    "B": {
+      "success": 19815,
+      "erasure": 0,
+      "residual": 0,
+      "logical": 185,
+      "total_failure_rate": 0.00925,
+      "logical_share_of_failures": 1.0
+    }
+  },
+  "PT7_coherent": {
+    "random_axis_t0.20": {
+      "theta": 0.2,
+      "q_prob": 0.5,
+      "coherent_failure_rate": 0.0,
+      "coherent_sigma": 0.0,
+      "twirl_failure_rate": 0.00585,
+      "twirl_p_per_qubit": 0.019734751499278728
+    },
+    "random_axis_t0.35": {
+      "theta": 0.35,
+      "q_prob": 0.5,
+      "coherent_failure_rate": 0.04666666666666667,
+      "coherent_sigma": 0.012177696674506895,
+      "twirl_failure_rate": 0.04495,
+      "twirl_p_per_qubit": 0.05878945317887789
+    },
+    "z_only_t0.20": {
+      "theta": 0.2,
+      "q_prob": 0.5,
+      "coherent_failure_rate": 0.0033333333333333335,
+      "coherent_sigma": 0.003327773140415986,
+      "twirl_failure_rate": 0.00925,
+      "twirl_p_per_qubit": 0.019734751499278728
+    },
+    "pass": false
+  },
+  "PT8_frame_p0.01": {
+    "B": {
+      "success": 19959,
+      "erasure": 0,
+      "residual": 0,
+      "logical": 41,
+      "total_failure_rate": 0.00205,
+      "logical_share_of_failures": 1.0
+    }
+  },
+  "PT8_frame_p0.02": {
+    "B": {
+      "success": 19890,
+      "erasure": 0,
+      "residual": 0,
+      "logical": 110,
+      "total_failure_rate": 0.0055,
+      "logical_share_of_failures": 1.0
+    }
+  },
+  "PT8_statevector": {
+    "0.01": {
+      "statevector_failure_rate": 0.0,
+      "frame_failure_rate": 0.00205,
+      "combined_sigma": 0.0003198278833998061,
+      "within_3_sigma": false
+    },
+    "0.02": {
+      "statevector_failure_rate": 0.007,
+      "frame_failure_rate": 0.0055,
+      "combined_sigma": 0.0026878406760818246,
+      "within_3_sigma": true
+    },
+    "pass": false
+  },
+  "PT9_sabotage": {
+    "even_rounds_rejected": true,
+    "short_round_rejected": true,
+    "single_decoder_refuses_multi_error": true,
+    "favourable_decoder_rejects_short_syndrome": true,
+    "correction_rejects_wrong_state_size": true,
+    "unknown_syndrome_rejected": true,
+    "pass": true
+  }
+}
