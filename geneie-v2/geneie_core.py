@@ -20,6 +20,9 @@ Changes vs the original, per Putt's rule (elaborate on every change):
 """
 from __future__ import annotations
 
+import hashlib
+from datetime import datetime, timezone
+
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -30,6 +33,18 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 
 RNG = np.random.default_rng(42)
+
+APP_VERSION = "2.2.0"
+
+# The research-only boundary, as one canonical string: the app shows it in a
+# persistent banner and build_provenance() attaches it to every run record,
+# so the disclaimer travels with any exported result instead of living only
+# in the README (evidence report, 2026-11-16: research-vs-clinical boundary).
+RESEARCH_ONLY_NOTICE = (
+    "Research use only: GENEIE is a research tool. Its outputs are hypotheses "
+    "for research use — not clinical diagnosis, treatment, or therapeutic "
+    "recommendations."
+)
 
 # ---------------------------------------------------------------- genomic demo data
 GENE_NAMES = [
@@ -64,9 +79,215 @@ def synthetic_genomic_data(n_samples: int = 120, n_features: int = 12, seed: int
     return df, y
 
 
+def prepare_numeric_frame(df: pd.DataFrame, min_rows: int = 4, min_features: int = 2):
+    """Clean an uploaded table for PCA + K-means. Returns (clean_df, report).
+
+    Added 2026-11-16 to close the v2 upload gap (uploads were parsed and then
+    ignored; PCA always ran on the demo data). What this does, and why:
+
+    - A column counts as numeric when at least half of its values parse as
+      numbers and at least `min_rows` of them do. That keeps real feature
+      columns (including numbers stored as text) and drops ID / gene / label
+      text columns instead of crashing on them or silently coercing them.
+    - Infinities become NaN; rows that are empty across every numeric column
+      are dropped; remaining missing cells are median-imputed per column and
+      counted, so the report can state exactly how much was filled in.
+    - Constant (zero-variance) columns are dropped and named: after scaling
+      they carry no signal and would otherwise poison the scaler with NaNs.
+    - Nothing is invented silently: the report names every dropped column,
+      the imputed-cell count, duplicate-row count and missing-value count,
+      so the UI can show the user precisely what their data went through.
+      (The duplicate / missing counts borrow the summary idea from the
+      GENEIE_unified starter Putt uploaded the same day; that starter only
+      summarised a CSV and never ran PCA on it, so the analysis wiring here
+      is new.)
+
+    Raises ValueError with a user-readable message when the upload cannot
+    support the analysis (too few usable rows or numeric features).
+    """
+    if df is None or len(df) == 0:
+        raise ValueError("The CSV contains no data rows.")
+    if len(df) < min_rows:
+        raise ValueError(
+            f"Need at least {min_rows} data rows to run PCA + K-means; "
+            f"this CSV has {len(df)}.")
+    numeric_cols, dropped_cols = [], []
+    cleaned = {}
+    for col in df.columns:
+        coerced = pd.to_numeric(df[col], errors="coerce")
+        n_numeric = int(coerced.notna().sum())
+        if n_numeric >= min_rows and n_numeric >= 0.5 * len(df):
+            numeric_cols.append(col)
+            cleaned[col] = coerced.replace([np.inf, -np.inf], np.nan)
+        else:
+            dropped_cols.append(str(col))
+    if len(numeric_cols) < min_features:
+        raise ValueError(
+            f"Need at least {min_features} numeric feature columns to run "
+            f"PCA + K-means; found {len(numeric_cols)} usable in this CSV. "
+            f"Dropped as non-numeric or too sparse: {dropped_cols or 'none'}.")
+    frame = pd.DataFrame(cleaned)
+    missing_before = int(frame.isna().sum().sum())
+    # Constant columns are dropped BEFORE empty-row removal: a row that is
+    # empty in every varying feature but present in a constant column is
+    # still an empty row, and an early test caught exactly that surviving
+    # to be fully median-imputed.
+    constant_cols = [c for c in frame.columns if frame[c].dropna().nunique() <= 1]
+    if constant_cols:
+        frame = frame.drop(columns=constant_cols)
+    if frame.shape[1] < min_features:
+        raise ValueError(
+            f"Need at least {min_features} varying numeric features; "
+            f"constant columns removed: {constant_cols}.")
+    frame = frame.dropna(how="all")
+    if len(frame) < min_rows:
+        raise ValueError(
+            f"Need at least {min_rows} rows with numeric data; "
+            f"only {len(frame)} remain after dropping empty rows.")
+    imputed_cells = int(frame.isna().sum().sum())
+    frame = frame.fillna(frame.median(numeric_only=True))
+    if frame.shape[1] < min_features:
+        raise ValueError(
+            f"Need at least {min_features} varying numeric features; "
+            f"constant columns removed: {constant_cols}.")
+    report = {
+        "n_rows_input": int(len(df)),
+        "n_rows_used": int(len(frame)),
+        "n_columns_input": int(len(df.columns)),
+        "numeric_columns": [str(c) for c in frame.columns],
+        "dropped_columns": dropped_cols,
+        "constant_columns": [str(c) for c in constant_cols],
+        "missing_values": missing_before,
+        "imputed_cells": imputed_cells,
+        "duplicate_rows": int(df.duplicated().sum()),
+    }
+    return frame.reset_index(drop=True), report
+
+
+# ---------------------------------------------------------------- provenance
+def library_versions():
+    """Versions of the key libraries a run actually depends on.
+
+    Read from installed distribution metadata (not module __version__) so the
+    record matches the environment that produced it, e.g. inside the deploy
+    container. Missing packages are reported as such, never guessed.
+    """
+    from importlib.metadata import PackageNotFoundError, version
+    out = {}
+    for dist in ("numpy", "pandas", "scikit-learn", "dash"):
+        try:
+            out[dist] = version(dist)
+        except PackageNotFoundError:
+            out[dist] = "not installed"
+    return out
+
+
+def build_provenance(*, dataset_kind: str, filename, input_shape,
+                     analysed_frame: pd.DataFrame, cleaning_report,
+                     analysis_result: dict, pca_components: int = 2,
+                     n_clusters: int = 2, seed: int = 42) -> dict:
+    """Build the per-run provenance record for one PCA + K-means run.
+
+    Added 2026-11-16 (v2.2.0), per the GENEIE evidence report's cheapest
+    credibility win: every result should be traceable to its inputs, cleaning,
+    parameters, and software versions. The record is a plain JSON-safe dict;
+    the app keeps it in session memory and offers it as a download — nothing
+    is written to disk server-side.
+
+    - `dataset_kind` is "demo" or "upload"; `filename` is the upload's name
+      (None for the demo data).
+    - `input_shape` is the (rows, columns) of the data as received, before
+      cleaning; `analysed_frame` is the exact numeric frame fed to PCA, and
+      its shape is recorded as the after-cleaning shape.
+    - `cleaning_report` is the dict from prepare_numeric_frame for uploads;
+      None for the demo data, which needs no cleaning (recorded as such).
+    - The SHA-256 of the analysed frame's CSV bytes identifies the run's
+      data: the same cleaned data always hashes the same, so a run can be
+      recognised and repeated.
+    - The research-only notice is attached to every record so it travels
+      with any exported copy of the result.
+    """
+    digest = hashlib.sha256(
+        analysed_frame.to_csv(index=False).encode("utf-8")).hexdigest()
+    return {
+        "app": "GENEIE",
+        "app_version": APP_VERSION,
+        "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "dataset": {"kind": dataset_kind, "filename": filename},
+        "input_shape": {"rows": int(input_shape[0]),
+                        "columns": int(input_shape[1])},
+        "cleaned_shape": {"rows": int(analysed_frame.shape[0]),
+                          "columns": int(analysed_frame.shape[1])},
+        "cleaning_report": cleaning_report,
+        "analysis": {
+            "method": "PCA + K-means (numeric features only; the drug-response "
+                      "model is separate and never retrains on uploads)",
+            "pca_components": int(pca_components),
+            "kmeans_clusters": int(n_clusters),
+            "kmeans_seed": int(seed),
+            "kmeans_n_init": 10,
+            "explained_variance_ratio":
+                [float(v) for v in analysis_result["explained_variance_ratio"]],
+            "inertia": float(analysis_result["inertia"]),
+        },
+        "libraries": library_versions(),
+        "cleaned_data_sha256": digest,
+        "cleaned_data_sha256_short": digest[:12],
+        "research_only": RESEARCH_ONLY_NOTICE,
+    }
+
+
+def provenance_markdown(record: dict) -> str:
+    """Render a provenance record as a small human-readable Markdown document."""
+    d = record["dataset"]
+    dataset = ("built-in synthetic demo data" if d["kind"] == "demo"
+               else f"upload: {d['filename']}")
+    lines = [
+        "# GENEIE run provenance",
+        "",
+        f"- App: GENEIE v{record['app_version']}",
+        f"- Timestamp (UTC): {record['timestamp_utc']}",
+        f"- Dataset: {dataset}",
+        f"- Input shape: {record['input_shape']['rows']} rows x "
+        f"{record['input_shape']['columns']} columns",
+        f"- Analysed shape (after cleaning): {record['cleaned_shape']['rows']} rows x "
+        f"{record['cleaned_shape']['columns']} columns",
+    ]
+    rep = record["cleaning_report"]
+    if rep is None:
+        lines.append("- Cleaning: none (demo data is used as generated)")
+    else:
+        lines += [
+            "- Cleaning (prepare_numeric_frame):",
+            f"  - numeric features used: {', '.join(rep['numeric_columns'])}",
+            f"  - dropped as non-numeric: {', '.join(rep['dropped_columns']) or 'none'}",
+            f"  - dropped as constant: {', '.join(rep['constant_columns']) or 'none'}",
+            f"  - missing cells median-imputed: {rep['imputed_cells']}",
+            f"  - duplicate rows in file: {rep['duplicate_rows']}",
+        ]
+    a = record["analysis"]
+    lines += [
+        f"- Analysis: PCA ({a['pca_components']} components) + K-means "
+        f"(k={a['kmeans_clusters']}, seed={a['kmeans_seed']}, n_init={a['kmeans_n_init']})",
+        f"- Explained variance ratio: "
+        f"{', '.join(f'{v:.4f}' for v in a['explained_variance_ratio'])}",
+        f"- K-means inertia: {a['inertia']:.2f}",
+        "- Libraries: " + ", ".join(f"{k} {v}" for k, v in record["libraries"].items()),
+        f"- Cleaned data SHA-256: {record['cleaned_data_sha256']}",
+        "",
+        f"_{record['research_only']}_",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def pca_kmeans(df: pd.DataFrame, n_clusters: int = 2, seed: int = 42):
     """PCA (2 components) + K-means on the numeric columns. Returns dict of results."""
     X = df.select_dtypes(include=[np.number]).to_numpy(dtype=float)
+    if X.shape[0] < 4 or X.shape[1] < 2:
+        raise ValueError(
+            f"PCA + K-means needs at least 4 rows and 2 numeric features; "
+            f"got {X.shape[0]} rows and {X.shape[1]} features.")
     X = StandardScaler().fit_transform(X)
     pca = PCA(n_components=2, random_state=seed)
     pcs = pca.fit_transform(X)

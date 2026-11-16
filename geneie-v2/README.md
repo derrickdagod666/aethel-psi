@@ -1,4 +1,4 @@
-# GENEIE v2
+# GENEIE v2 (v2.2.0)
 
 A working, runnable rebuild of Putt's GENEIE — genomic research + drug discovery demo —
 built from his own pasted material. The original is preserved verbatim in
@@ -9,6 +9,24 @@ built from his own pasted material. The original is preserved verbatim in
 - **Genomic data tab** — upload a CSV or use built-in synthetic demo data (120 samples,
   12 features, two planted clusters). Table view with filter/sort, PCA + K-means with
   real plots. t-SNE only runs when n ≥ 31 (the original crashed below that).
+  **Uploads are analysed, not just acknowledged (fixed 2026-11-16):** on upload the
+  table and the PCA + K-means graph switch to your file, and "Re-run PCA + K-means"
+  re-runs on the upload. Cleaning rules, all reported in the status line: numeric
+  feature columns only (a column counts when at least half its values parse as
+  numbers; text/ID columns are dropped and named), at least 4 rows and 2 varying
+  numeric features, missing cells median-imputed and counted, constant columns
+  dropped and named, duplicate rows counted. Limits: 5 MB, 5,000 rows. Uploads are
+  processed in memory only — never written to disk or sent anywhere.
+- **Run provenance (v2.2.0)** — every analysis run (demo view, upload, or Re-run)
+  records a provenance record under the graph: timestamp, app version, dataset
+  identity, shapes before/after cleaning, the full cleaning report, analysis
+  parameters, library versions, and a SHA-256 of the analysed data so a run can
+  be identified and repeated. Downloadable as JSON or Markdown; held in session
+  memory only.
+- **Research-only banner (v2.2.0)** — a persistent banner (and footer) states
+  that GENEIE is a research tool: outputs are hypotheses for research use, not
+  clinical diagnosis, treatment, or therapeutic recommendations. The same
+  notice is embedded in every provenance record.
 - **Drug response tab** — sklearn MLP (128 → 64, the original's Keras shape, in sklearn),
   trained on synthetic data, train/test split, test accuracy reported in the UI.
   **Not a real drug-efficacy model.**
@@ -25,7 +43,8 @@ built from his own pasted material. The original is preserved verbatim in
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python test_headless.py   # headless test, no server needed (takes ~5 min, mostly VQE)
+python test_fast.py       # fast suite: core cleaning + Dash callbacks + layout (seconds)
+python test_headless.py   # full headless test, no server needed (takes ~5 min, mostly VQE)
 python app.py             # then open http://127.0.0.1:8050 (first start takes ~4 min)
 ```
 
@@ -34,12 +53,18 @@ python app.py             # then open http://127.0.0.1:8050 (first start takes ~
 - **Synthetic demo data only.** No real patient data, no real compounds, no clinical
   claims. The drug model cannot predict real drug response; the genomic clusters are
   planted in the demo data on purpose.
+- **Research use only.** GENEIE is a research tool; every output is a hypothesis
+  for research use — not clinical diagnosis, treatment, or a therapeutic
+  recommendation. The app says so in a persistent banner, and the notice is
+  embedded in every run's provenance record.
 - **Simulator only.** VQE runs on PennyLane's `default.qubit` simulator. No real
   quantum hardware, no QPU access.
 - **Small molecules only.** VQE is H2 / LiH; H2O / NH3 appear only in the 3D viewer.
   UCCSD on larger molecules gets slow fast on a simulator.
-- Uploaded CSVs are shown as uploaded; re-running PCA on an upload is a TODO
-  (the table currently keeps showing demo data after an upload — the status line says so).
+- Uploaded CSVs get PCA + K-means only — the drug-response model is still trained
+  on synthetic data and does NOT retrain on uploads, and no label/target column in
+  an upload is used. An upload is a clustering view of your numeric features,
+  not a validated analysis of your study.
 
 ## What was dropped, and why (roadmap, not features)
 
