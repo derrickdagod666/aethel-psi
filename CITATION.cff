@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below — results as measured, including the FAILs."
+title: "aethel-psi: UAF waveform pipeline and Gate 3 gravitational-wave tests, Quinovet quantum error correction, and the GENEIE genomics + VQE workbench"
+authors:
+  - family-names: "Irons"
+    given-names: "Derrick"
+    orcid: "https://orcid.org/0009-0001-7064-6611"
+license: MIT
+repository-code: "https://github.com/derrickdagod666/aethel-psi"
+url: "https://github.com/derrickdagod666/aethel-psi"
+references:
+  - type: article
+    title: "Aethel-Psi Synthesis (Third Revised Edition)"
+    authors:
+      - family-names: "Irons"
+        given-names: "Derrick"
+        orcid: "https://orcid.org/0009-0001-7064-6611"
+    doi: "10.5281/zenodo.24038497"
+    year: 2026
+  - type: article
+    title: "Quinovet favourable-family decoder note"
+    authors:
+      - family-names: "Irons"
+        given-names: "Derrick"
+        orcid: "https://orcid.org/0009-0001-7064-6611"
+    doi: "10.5281/zenodo.24269738"
+    year: 2026

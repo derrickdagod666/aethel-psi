@@ -1,7 +1,18 @@
 # aethel-psi
 
 **The Aethel-Psi Synthesis — code, tests, and data-analysis pipeline.**
-Derrick Irons / The Aethelred Institute · ORCID 0009-0001-7064-6611
+Derrick Irons · Independent Researcher · ORCID 0009-0001-7064-6611
+*(The Aethelred Institute is a planned business name, not an established institute.)*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Quinovet note — Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.24269738-blue)](https://doi.org/10.5281/zenodo.24269738)
+[![GENEIE — live demo](https://img.shields.io/badge/GENEIE-live%20demo-green)](https://geneie-v2.onrender.com)
+[![Supporter Tier — Gumroad](https://img.shields.io/badge/Supporter%20Tier-Gumroad-pink)](https://7783626793893.gumroad.com/l/spepje)
+
+> **Start here — the three strongest verified results in this repo:**
+> 1. **γ = 0.4 is excluded on real GW250114 strain** (full PE: γ ≲ 0.08 at 95%; ln B = −3.06 ± 0.23 vs GR). The theory's headline number did not survive its own pipeline — that is the point of the pipeline.
+> 2. **Quinovet's favourable-family decoder cuts total failure 11.43% → 8.57%** against standard MWPM-style decoding in exact simulation, with the trade-off disclosed (silent logical failures rise 1.23% → 3.04%). Note: [doi:10.5281/zenodo.24269738](https://doi.org/10.5281/zenodo.24269738).
+> 3. **GENEIE v2.2.0 is live** — a genomics + VQE workbench with full run provenance and a permanent RESEARCH USE ONLY boundary: [geneie-v2.onrender.com](https://geneie-v2.onrender.com).
 
 This repository is the *code* behind the paper
 [`docs/aethel-psi-synthesis-third-revised-edition.pdf`](docs/aethel-psi-synthesis-third-revised-edition.pdf)
@@ -28,6 +39,24 @@ the product, not a validated theory.
   3-qubit repetition-code circuit, reconstructed for Qiskit 2.x.
 - **Quantum-cognitive / PennyLane code from Drive** (`drive-code/`):
   earlier exploratory code, kept as-is, not production code.
+- **Quinovet** (`quinovet/`): quantum error correction on Shor's
+  9-qubit code — a favourable-family decoder with a prepared answer
+  for all 256 syndrome patterns, a QFIM closed form with self-test,
+  and the PsiGate Berry phase computed by Pancharatnam product
+  (+2.221442 vs the +2.2214 reference). In the registered benchmark
+  (20,000 trials per noise level, identical errors to both decoders)
+  it cuts total failures from 11.43% to 8.57% at the highest noise
+  tested, while silent logical failures rise from 1.23% to 3.04% —
+  the trade-off is part of the result, not a footnote. Exact
+  simulation under an idealised noise model; **not run on hardware**.
+  Note published on Zenodo: doi:10.5281/zenodo.24269738.
+- **GENEIE v2** (`geneie-v2/`): genomics + VQE workbench, live at
+  [geneie-v2.onrender.com](https://geneie-v2.onrender.com). Uploaded
+  CSVs drive the Genomic tab (table + PCA/K-means); every run carries
+  a provenance record (timestamp, version, dataset identity,
+  cleaning report, parameters, library versions, SHA-256 of the
+  frame consumed). Permanent RESEARCH USE ONLY banner: outputs are
+  hypotheses, not diagnosis or treatment.
 
 ## What it does NOT claim — read this first
 
@@ -53,6 +82,18 @@ the product, not a validated theory.
   NOT robustly survive precession (ΔlnL spans −16.4 to +8.7
   across tilts); cite only as a fixed-aligned-spin profile
   limit. A spin-marginalised PE is running (2026-11-07).
+- **GW231123 is in unresolved tension with GW250114 — do not quote
+  either γ as a universal measurement.** The GW231123 dynesty PE
+  completed 2026-11-13 (6,005 samples) with γ median 0.721,
+  P(γ > 0.4) = 0.997 — disjoint from GW250114's γ ≲ 0.08 (95%).
+  The run was **not blind** (its own earlier profile already
+  favoured γ = 0.4 on this event), **no GR companion PE exists**
+  for GW231123, so no UAF-vs-GR Bayes factor exists for it, and
+  GW231123 is strongly precessing (χ_p 0.774), so waveform
+  systematics are unchecked. The author's v6 addendum already
+  tested and closed both reconciliations (γ(M) and γ(spin)).
+  What would discriminate: the GR companion PE, a second-waveform
+  systematics check, and a pipeline-equivalence audit.
 - **The spin-γ hypothesis is closed** (v6, real LVK spin samples):
   both the χ_eff and χ_p branches FAIL. No replacement γ(M)/γ(spin)
   mechanism is in this repo.
@@ -72,7 +113,13 @@ the product, not a validated theory.
   a valuation of the theory. A timestamp (arXiv/Zenodo) proves
   priority only.
 
-## Status — 2026-11-07
+## Status — 2026-11-17 (README refreshed; results below as measured)
+
+- **Since 2026-11-07:** Quinovet committed (`quinovet/`) with its
+  note on Zenodo (doi:10.5281/zenodo.24269738); GENEIE reached
+  v2.2.0 and is live on Render with provenance records and the
+  research-only banner; the GW231123 PE completed (see the tension
+  bullet above). `CITATION.cff` added.
 
 - **v0.1.0 package:** `aethel_psi` is pip-installable
   (`pyproject.toml`, Bilby 2.8.2 / Qiskit 2.6.2 pinned).
@@ -84,11 +131,10 @@ the product, not a validated theory.
   the connector cannot tag; it must be made on the web (see
   `PAID_TIER_REPORT.md` for the exact steps). Tier 2 may only
   be offered once that release exists.
-- **Long runs in progress (no results yet):** GW231123 full
-  precessing PE — resumed twice after VM reboots, latest
-  16279it, dlogz 6.92 (target 0.1); GW200129 spin-marginalised
-  PE — running, UAF run only. No posterior or Bayes factor
-  from either run exists yet. See `PAID_TIER_REPORT.md`.
+- **Long runs:** GW231123 full precessing PE **completed
+  2026-11-13** — see the tension bullet above before quoting it.
+  GW200129 spin-marginalised PE: status unverified since
+  2026-11-07; no posterior or Bayes factor from it is claimed here.
 
 ## Quickstart (verified 2026-11-07)
 
@@ -142,6 +188,8 @@ aethel-psi/
 ├── act-dr6/             Real ACT DR6.02 TT+TE+EE ripple test (sacc/cobaya)
 ├── stacking/            4–5 event profile stack + Fisher forecast
 ├── drive-code/          Earlier PennyLane / quantum-cognitive code (as-is)
+├── quinovet/            QEC: favourable-family decoder, QFIM, PsiGate Berry phase
+├── geneie-v2/           GENEIE genomics + VQE workbench (live on Render)
 ├── aethelred-agent/     Agent backend — README + .env.example ONLY (see below)
 ├── docs/                Third Revised Edition PDF (reference only)
 └── requirements.txt     Pinned versions used for the verified runs
@@ -196,7 +244,10 @@ patentable device or method ships, which this repo does not contain.)
 
 If you use the pipeline, cite the paper (Third Revised Edition,
 Nov 2026, Derrick Irons, The Aethelred Institute, ORCID
-0009-0001-7064-6611) and the Zenodo/arXiv record once published —
-see `../arxiv-zenodo/` (sibling package) for the timestamp record.
+0009-0001-7064-6611) — machine-readable citation in `CITATION.cff`.
+Published records: UAF paper, Zenodo
+[doi:10.5281/zenodo.24038497](https://doi.org/10.5281/zenodo.24038497);
+Quinovet favourable-family note, Zenodo
+[doi:10.5281/zenodo.24269738](https://doi.org/10.5281/zenodo.24269738).
 Cite the *results as measured*, including the FAILs: γ ≲ 0.08,
 not γ = 0.4.

@@ -5,6 +5,27 @@ All notable changes to the `aethel-psi` repo. The theory in the paper is
 measured, including the FAILs. Nothing here is a Nobel claim, a
 peer-reviewed result, or a valuation of the theory.
 
+## [Unreleased] — 2026-11-17
+
+### Added
+- `CITATION.cff` — machine-readable citation (paper + Quinovet note DOIs).
+- README: badges (MIT, Quinovet Zenodo DOI, GENEIE live demo, Gumroad
+  Supporter Tier), a "start here" summary of the three strongest
+  verified results, Quinovet and GENEIE v2 sections, and the
+  GW231123 tension recorded in the does-not-claim list.
+
+### Measured since 0.1.0
+- **GW231123 dynesty PE completed 2026-11-13** (6,005 samples):
+  γ median 0.721, P(γ > 0.4) = 0.997 — disjoint from GW250114's
+  γ ≲ 0.08 (95%). Not blind, no GR companion PE, precession
+  systematics unchecked; **not quotable as a universal measurement**.
+- **Quinovet committed** with its Zenodo note
+  (doi:10.5281/zenodo.24269738): favourable-family decoder cuts
+  total failure 11.43% → 8.57% in exact simulation; silent logical
+  failures rise 1.23% → 3.04% (trade-off disclosed).
+- **GENEIE v2.2.0 live** on Render: upload-driven Genomic tab,
+  per-run provenance records, permanent RESEARCH USE ONLY banner.
+
 ## [0.1.0] — 2026-11-07 (first versioned release)
 
 First pip-installable release. The code itself is unchanged from the
